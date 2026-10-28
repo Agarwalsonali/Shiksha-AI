@@ -72,6 +72,30 @@ export async function checkDatabaseConnection(): Promise<boolean> {
   }
 }
 
+export async function getAuthUserByEmail(email: string) {
+  const normalizedEmail = email.trim().toLowerCase();
+  const perPage = 1000;
+
+  for (let page = 1; ; page += 1) {
+    const { data, error } = await supabase.auth.admin.listUsers({
+      page,
+      perPage,
+    });
+
+    if (error) {
+      throw error;
+    }
+
+    const user = data.users.find(
+      (candidate) => candidate.email?.toLowerCase() === normalizedEmail
+    );
+
+    if (user || data.users.length < perPage) {
+      return user ?? null;
+    }
+  }
+}
+
 /**
  * Get Supabase client for a specific user (with their JWT)
  */

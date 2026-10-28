@@ -1,6 +1,6 @@
 import type { Response } from 'express';
 import type { AuthRequest } from '../middleware/auth';
-import { supabase, supabaseClient } from '../db/supabase';
+import { getAuthUserByEmail, supabase, supabaseClient } from '../db/supabase';
 import { successResponse } from '../utils/apiResponse';
 import {
   UnauthorizedError,
@@ -109,6 +109,14 @@ export const login = async (req: AuthRequest, res: Response) => {
 
   if (error) {
     if (error.code === 'email_not_confirmed') {
+      const authUser = await getAuthUserByEmail(email);
+
+      if (authUser?.email_confirmed_at) {
+        throw new UnauthorizedError(
+          'This account is verified, but Supabase rejected the login. Confirm that the frontend and backend use the same Supabase project, then reset the account password.'
+        );
+      }
+
       throw new UnauthorizedError(
         'Please verify your email address before signing in'
       );
