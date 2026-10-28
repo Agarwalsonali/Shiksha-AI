@@ -1,0 +1,897 @@
+{
+  "class": 10,
+  "board": "CBSE",
+  "subjects": [
+    {
+      "id": "mathematics-10",
+      "name": "Mathematics",
+      "icon": "calculator",
+      "color": "#3B82F6",
+      "total_chapters": 15,
+      "chapters": [
+        {
+          "id": "math-10-ch01",
+          "order": 1,
+          "name": "Real Numbers",
+          "description": "Euclid's division lemma and Fundamental Theorem of Arithmetic",
+          "topics": ["Euclid's Division Lemma", "The Fundamental Theorem of Arithmetic", "Revisiting Irrational Numbers", "Revisiting Rational Numbers and Their Decimal Expansions"],
+          "estimated_hours": 8,
+          "weightage": "high"
+        },
+        {
+          "id": "math-10-ch02",
+          "order": 2,
+          "name": "Polynomials",
+          "description": "Zeros of polynomials and division algorithm",
+          "topics": ["Geometrical Meaning of the Zeros of a Polynomial", "Relationship between Zeros and Coefficients", "Division Algorithm for Polynomials"],
+          "estimated_hours": 8,
+          "weightage": "high"
+        },
+        {
+          "id": "math-10-ch03",
+          "order": 3,
+          "name": "Pair of Linear Equations in Two Variables",
+          "description": "Solving linear equations graphically and algebraically",
+          "topics": ["Pair of Linear Equations in Two Variables", "Graphical Method of Solution", "Algebraic Methods of Solving", "Substitution Method", "Elimination Method", "Cross-Multiplication Method"],
+          "estimated_hours": 12,
+          "weightage": "high"
+        },
+        {
+          "id": "math-10-ch04",
+          "order": 4,
+          "name": "Quadratic Equations",
+          "description": "Solving quadratic equations and nature of roots",
+          "topics": ["Quadratic Equations", "Solution of a Quadratic Equation by Factorisation", "Solution by Completing the Square", "Nature of Roots"],
+          "estimated_hours": 12,
+          "weightage": "high"
+        },
+        {
+          "id": "math-10-ch05",
+          "order": 5,
+          "name": "Arithmetic Progressions",
+          "description": "AP, nth term, and sum of n terms",
+          "topics": ["Arithmetic Progressions", "nth Term of an AP", "Sum of First n Terms of an AP"],
+          "estimated_hours": 10,
+          "weightage": "high"
+        },
+        {
+          "id": "math-10-ch06",
+          "order": 6,
+          "name": "Triangles",
+          "description": "Similar triangles and Pythagoras theorem",
+          "topics": ["Similar Figures", "Similarity of Triangles", "Criteria for Similarity of Triangles", "Areas of Similar Triangles", "Pythagoras Theorem"],
+          "estimated_hours": 14,
+          "weightage": "high"
+        },
+        {
+          "id": "math-10-ch07",
+          "order": 7,
+          "name": "Coordinate Geometry",
+          "description": "Distance formula, section formula, and area of triangle",
+          "topics": ["Distance Formula", "Section Formula", "Area of a Triangle"],
+          "estimated_hours": 10,
+          "weightage": "high"
+        },
+        {
+          "id": "math-10-ch08",
+          "order": 8,
+          "name": "Introduction to Trigonometry",
+          "description": "Trigonometric ratios and identities",
+          "topics": ["Trigonometric Ratios", "Trigonometric Ratios of Some Specific Angles", "Trigonometric Ratios of Complementary Angles", "Trigonometric Identities"],
+          "estimated_hours": 12,
+          "weightage": "high"
+        },
+        {
+          "id": "math-10-ch09",
+          "order": 9,
+          "name": "Some Applications of Trigonometry",
+          "description": "Heights and distances",
+          "topics": ["Heights and Distances", "Line of Sight", "Angle of Elevation", "Angle of Depression"],
+          "estimated_hours": 8,
+          "weightage": "high"
+        },
+        {
+          "id": "math-10-ch10",
+          "order": 10,
+          "name": "Circles",
+          "description": "Tangent to a circle",
+          "topics": ["Tangent to a Circle", "Number of Tangents from a Point on a Circle"],
+          "estimated_hours": 8,
+          "weightage": "medium"
+        },
+        {
+          "id": "math-10-ch11",
+          "order": 11,
+          "name": "Constructions",
+          "description": "Division of line segment and construction of tangents",
+          "topics": ["Division of a Line Segment", "Construction of Tangents to a Circle"],
+          "estimated_hours": 6,
+          "weightage": "medium"
+        },
+        {
+          "id": "math-10-ch12",
+          "order": 12,
+          "name": "Areas Related to Circles",
+          "description": "Area of sector and segment",
+          "topics": ["Perimeter and Area of a Circle", "Areas of Sector and Segment of a Circle", "Areas of Combinations of Plane Figures"],
+          "estimated_hours": 10,
+          "weightage": "high"
+        },
+        {
+          "id": "math-10-ch13",
+          "order": 13,
+          "name": "Surface Areas and Volumes",
+          "description": "Surface areas and volumes of combinations of solids",
+          "topics": ["Surface Area of a Combination of Solids", "Volume of a Combination of Solids", "Conversion of Solid from One Shape to Another", "Frustum of a Cone"],
+          "estimated_hours": 12,
+          "weightage": "high"
+        },
+        {
+          "id": "math-10-ch14",
+          "order": 14,
+          "name": "Statistics",
+          "description": "Mean, median, and mode of grouped data",
+          "topics": ["Mean of Grouped Data", "Mode of Grouped Data", "Median of Grouped Data", "Graphical Representation of Cumulative Frequency Distribution"],
+          "estimated_hours": 10,
+          "weightage": "high"
+        },
+        {
+          "id": "math-10-ch15",
+          "order": 15,
+          "name": "Probability",
+          "description": "Classical definition of probability",
+          "topics": ["Probability - A Theoretical Approach", "Impossible and Sure Events", "Complementary Events"],
+          "estimated_hours": 8,
+          "weightage": "high"
+        }
+      ]
+    },
+    {
+      "id": "science-10",
+      "name": "Science",
+      "icon": "flask",
+      "color": "#10B981",
+      "total_chapters": 16,
+      "chapters": [
+        {
+          "id": "sci-10-ch01",
+          "order": 1,
+          "name": "Chemical Reactions and Equations",
+          "description": "Types of chemical reactions and balancing equations",
+          "topics": ["Chemical Equations", "Types of Chemical Reactions", "Combination Reaction", "Decomposition Reaction", "Displacement Reaction", "Double Displacement Reaction", "Oxidation and Reduction"],
+          "estimated_hours": 10,
+          "weightage": "high"
+        },
+        {
+          "id": "sci-10-ch02",
+          "order": 2,
+          "name": "Acids, Bases and Salts",
+          "description": "Properties of acids, bases, and salts",
+          "topics": ["Understanding the Chemical Properties of Acids and Bases", "How Strong are Acid or Base Solutions?", "Importance of pH in Everyday Life", "More about Salts"],
+          "estimated_hours": 10,
+          "weightage": "high"
+        },
+        {
+          "id": "sci-10-ch03",
+          "order": 3,
+          "name": "Metals and Non-metals",
+          "description": "Physical and chemical properties of metals and non-metals",
+          "topics": ["Physical Properties of Metals and Non-metals", "Chemical Properties of Metals", "How do Metals and Non-metals React?", "Occurrence of Metals", "Corrosion"],
+          "estimated_hours": 12,
+          "weightage": "high"
+        },
+        {
+          "id": "sci-10-ch04",
+          "order": 4,
+          "name": "Carbon and its Compounds",
+          "description": "Bonding in carbon, hydrocarbons, and functional groups",
+          "topics": ["Bonding in Carbon", "Versatile Nature of Carbon", "Saturated and Unsaturated Carbon Compounds", "Nomenclature of Carbon Compounds", "Chemical Properties of Carbon Compounds", "Some Important Carbon Compounds", "Soaps and Detergents"],
+          "estimated_hours": 14,
+          "weightage": "high"
+        },
+        {
+          "id": "sci-10-ch05",
+          "order": 5,
+          "name": "Periodic Classification of Elements",
+          "description": "Modern periodic table and trends",
+          "topics": ["Making Order out of Chaos", "Dobereiner's Triads", "Newlands' Law of Octaves", "Mendeleev's Periodic Table", "The Modern Periodic Table", "Trends in the Modern Periodic Table"],
+          "estimated_hours": 8,
+          "weightage": "high"
+        },
+        {
+          "id": "sci-10-ch06",
+          "order": 6,
+          "name": "Life Processes",
+          "description": "Nutrition, respiration, transportation, and excretion",
+          "topics": ["What are Life Processes?", "Nutrition", "Autotrophic Nutrition", "Heterotrophic Nutrition", "Respiration", "Transportation", "Excretion"],
+          "estimated_hours": 14,
+          "weightage": "high"
+        },
+        {
+          "id": "sci-10-ch07",
+          "order": 7,
+          "name": "Control and Coordination",
+          "description": "Nervous system and hormonal control",
+          "topics": ["Animals - Nervous System", "Human Brain", "Coordination in Plants", "Hormones in Animals"],
+          "estimated_hours": 12,
+          "weightage": "high"
+        },
+        {
+          "id": "sci-10-ch08",
+          "order": 8,
+          "name": "How do Organisms Reproduce?",
+          "description": "Modes of reproduction in plants and animals",
+          "topics": ["Do Organisms Create Exact Copies of Themselves?", "Modes of Reproduction Used by Single Organisms", "Sexual Reproduction", "Reproduction in Human Beings", "Reproductive Health"],
+          "estimated_hours": 12,
+          "weightage": "high"
+        },
+        {
+          "id": "sci-10-ch09",
+          "order": 9,
+          "name": "Heredity and Evolution",
+          "description": "Mendel's contributions and evolution",
+          "topics": ["Accumulation of Variation During Reproduction", "Heredity", "Mendel's Contributions", "Sex Determination", "Evolution", "Speciation", "Evolution by Stages", "Human Evolution"],
+          "estimated_hours": 10,
+          "weightage": "high"
+        },
+        {
+          "id": "sci-10-ch10",
+          "order": 10,
+          "name": "Light - Reflection and Refraction",
+          "description": "Reflection and refraction of light",
+          "topics": ["Reflection of Light", "Spherical Mirrors", "Image Formation by Spherical Mirrors", "Sign Convention for Reflection", "Mirror Formula and Magnification", "Refraction of Light", "Refraction through a Glass Slab", "Refraction by Spherical Lenses"],
+          "estimated_hours": 14,
+          "weightage": "high"
+        },
+        {
+          "id": "sci-10-ch11",
+          "order": 11,
+          "name": "Human Eye and Colourful World",
+          "description": "Human eye, defects of vision, and dispersion",
+          "topics": ["The Human Eye", "Defects of Vision and their Correction", "Refraction of Light through a Prism", "Dispersion of White Light by a Glass Prism", "Atmospheric Refraction", "Scattering of Light"],
+          "estimated_hours": 10,
+          "weightage": "high"
+        },
+        {
+          "id": "sci-10-ch12",
+          "order": 12,
+          "name": "Electricity",
+          "description": "Electric current, circuits, and heating effects",
+          "topics": ["Electric Current and Circuit", "Electric Potential and Potential Difference", "Ohm's Law", "Resistance of a Conductor", "Resistors in Series and Parallel", "Heating Effect of Electric Current", "Electric Power"],
+          "estimated_hours": 14,
+          "weightage": "high"
+        },
+        {
+          "id": "sci-10-ch13",
+          "order": 13,
+          "name": "Magnetic Effects of Electric Current",
+          "description": "Magnetic field, electromagnets, and electric motor",
+          "topics": ["Magnetic Field and Field Lines", "Magnetic Field due to a Current-Carrying Conductor", "Force on a Current-Carrying Conductor", "Electric Motor", "Electromagnetic Induction", "Electric Generator", "Domestic Electric Circuits"],
+          "estimated_hours": 12,
+          "weightage": "high"
+        },
+        {
+          "id": "sci-10-ch14",
+          "order": 14,
+          "name": "Sources of Energy",
+          "description": "Conventional and non-conventional sources of energy",
+          "topics": ["What is a Good Source of Energy?", "Conventional Sources of Energy", "Alternative or Non-conventional Sources of Energy", "Environmental Consequences", "Energy from the Sea"],
+          "estimated_hours": 6,
+          "weightage": "medium"
+        },
+        {
+          "id": "sci-10-ch15",
+          "order": 15,
+          "name": "Our Environment",
+          "description": "Ecosystem, food chains, and environmental problems",
+          "topics": ["What Happens When We Add Our Waste to the Environment?", "Eco-system", "Food Chains and Webs", "How do Our Activities Affect the Environment?", "Ozone Layer and How it is Getting Depleted"],
+          "estimated_hours": 6,
+          "weightage": "medium"
+        },
+        {
+          "id": "sci-10-ch16",
+          "order": 16,
+          "name": "Management of Natural Resources",
+          "description": "Conservation of natural resources",
+          "topics": ["Why Do We Need to Manage Our Resources?", "Forests and Wildlife", "Water for All", "Coal and Petroleum", "An Overview of Natural Resource Management"],
+          "estimated_hours": 6,
+          "weightage": "medium"
+        }
+      ]
+    },
+    {
+      "id": "social-science-10",
+      "name": "Social Science",
+      "icon": "globe",
+      "color": "#F59E0B",
+      "total_chapters": 24,
+      "chapters": [
+        {
+          "id": "sst-10-hist-ch01",
+          "order": 1,
+          "name": "The Rise of Nationalism in Europe",
+          "description": "Emergence of nation-states in Europe",
+          "topics": ["The French Revolution and the Idea of the Nation", "The Making of Nationalism in Europe", "The Age of Revolutions: 1830-1848", "The Making of Germany and Italy", "Visualising the Nation", "Nationalism and Imperialism"],
+          "estimated_hours": 10,
+          "weightage": "high"
+        },
+        {
+          "id": "sst-10-hist-ch02",
+          "order": 2,
+          "name": "Nationalism in India",
+          "description": "Indian national movement",
+          "topics": ["The First World War, Khilafat and Non-Cooperation", "Differing Strands within the Movement", "Towards Civil Disobedience", "The Sense of Collective Belonging"],
+          "estimated_hours": 12,
+          "weightage": "high"
+        },
+        {
+          "id": "sst-10-hist-ch03",
+          "order": 3,
+          "name": "The Making of a Global World",
+          "description": "Globalisation in history",
+          "topics": ["The Pre-modern World", "The Nineteenth Century (1815-1914)", "The Inter-war Economy", "Rebuilding a World Economy: The Post-War Era"],
+          "estimated_hours": 8,
+          "weightage": "medium"
+        },
+        {
+          "id": "sst-10-hist-ch04",
+          "order": 4,
+          "name": "The Age of Industrialisation",
+          "description": "Industrial revolution and its impact",
+          "topics": ["Before the Industrial Revolution", "Hand Labour and Steam Power", "Industrialisation in the Colonies", "Factories Come Up", "The Peculiarities of Industrial Growth", "Market for Goods"],
+          "estimated_hours": 8,
+          "weightage": "medium"
+        },
+        {
+          "id": "sst-10-hist-ch05",
+          "order": 5,
+          "name": "Print Culture and the Modern World",
+          "description": "History of print and its impact",
+          "topics": ["The First Printed Books", "Print Comes to Europe", "The Print Revolution and Its Impact", "The Reading Mania", "Print Culture and the French Revolution", "India and the World of Print"],
+          "estimated_hours": 8,
+          "weightage": "medium"
+        },
+        {
+          "id": "sst-10-geo-ch01",
+          "order": 6,
+          "name": "Resources and Development",
+          "description": "Types of resources and resource planning",
+          "topics": ["Types of Resources", "Development of Resources", "Resource Planning", "Land Resources", "Land Utilisation", "Land Use Pattern in India", "Land Degradation and Conservation Measures", "Soil as a Resource"],
+          "estimated_hours": 8,
+          "weightage": "high"
+        },
+        {
+          "id": "sst-10-geo-ch02",
+          "order": 7,
+          "name": "Forest and Wildlife Resources",
+          "description": "Biodiversity and conservation",
+          "topics": ["Biodiversity in India", "Flora and Fauna in India", "Vanishing Forests", "Asiatic Cheetah", "Conservation of Forest and Wildlife in India", "Community and Conservation"],
+          "estimated_hours": 6,
+          "weightage": "medium"
+        },
+        {
+          "id": "sst-10-geo-ch03",
+          "order": 8,
+          "name": "Water Resources",
+          "description": "Water resources and conservation",
+          "topics": ["Water Scarcity and The Need for Water Conservation", "Multi-Purpose River Projects and Integrated Water Resources Management", "Rainwater Harvesting"],
+          "estimated_hours": 6,
+          "weightage": "medium"
+        },
+        {
+          "id": "sst-10-geo-ch04",
+          "order": 9,
+          "name": "Agriculture",
+          "description": "Types of farming and major crops",
+          "topics": ["Types of Farming", "Cropping Pattern", "Major Crops", "Food Crops", "Non-food Crops", "Technological and Institutional Reforms", "Contribution of Agriculture to the National Economy"],
+          "estimated_hours": 10,
+          "weightage": "high"
+        },
+        {
+          "id": "sst-10-geo-ch05",
+          "order": 10,
+          "name": "Minerals and Energy Resources",
+          "description": "Types of minerals and energy sources",
+          "topics": ["What is a Mineral?", "Mode of Occurrence of Minerals", "Ferrous and Non-Ferrous Minerals", "Non-Metallic Minerals", "Conservation of Minerals", "Energy Resources", "Conventional and Non-Conventional Sources of Energy"],
+          "estimated_hours": 8,
+          "weightage": "high"
+        },
+        {
+          "id": "sst-10-geo-ch06",
+          "order": 11,
+          "name": "Manufacturing Industries",
+          "description": "Importance and types of industries",
+          "topics": ["Importance of Manufacturing", "Industrial Location", "Agro-based Industries", "Mineral-based Industries", "Industrial Pollution and Environmental Degradation"],
+          "estimated_hours": 10,
+          "weightage": "high"
+        },
+        {
+          "id": "sst-10-geo-ch07",
+          "order": 12,
+          "name": "Lifelines of National Economy",
+          "description": "Transport, communication, and trade",
+          "topics": ["Transport", "Roadways", "Railways", "Pipelines", "Waterways", "Airways", "Communication", "International Trade", "Tourism as a Trade"],
+          "estimated_hours": 8,
+          "weightage": "high"
+        },
+        {
+          "id": "sst-10-civ-ch01",
+          "order": 13,
+          "name": "Power Sharing",
+          "description": "Why and how is power shared?",
+          "topics": ["Belgium and Sri Lanka", "Why Power Sharing is Desirable?", "Forms of Power Sharing"],
+          "estimated_hours": 6,
+          "weightage": "high"
+        },
+        {
+          "id": "sst-10-civ-ch02",
+          "order": 14,
+          "name": "Federalism",
+          "description": "Federal system in India",
+          "topics": ["What is Federalism?", "What Make India a Federal Country?", "How is Federalism Practised?", "Decentralisation in India"],
+          "estimated_hours": 8,
+          "weightage": "high"
+        },
+        {
+          "id": "sst-10-civ-ch03",
+          "order": 15,
+          "name": "Democracy and Diversity",
+          "description": "Democracy, social differences, and politics",
+          "topics": ["A Story from Mexico Olympics", "Differences, Similarities, Divisions", "Politics of Social Divisions"],
+          "estimated_hours": 6,
+          "weightage": "medium"
+        },
+        {
+          "id": "sst-10-civ-ch04",
+          "order": 16,
+          "name": "Gender, Religion and Caste",
+          "description": "Social divisions and politics",
+          "topics": ["Gender and Politics", "Religion, Communalism and Politics", "Caste and Politics"],
+          "estimated_hours": 8,
+          "weightage": "high"
+        },
+        {
+          "id": "sst-10-civ-ch05",
+          "order": 17,
+          "name": "Popular Struggles and Movements",
+          "description": "Democracy and popular struggles",
+          "topics": ["Popular Struggles in Nepal and Bolivia", "Mobilisation and Organisations", "Pressure Groups and Movements"],
+          "estimated_hours": 6,
+          "weightage": "medium"
+        },
+        {
+          "id": "sst-10-civ-ch06",
+          "order": 18,
+          "name": "Political Parties",
+          "description": "Political parties in democracy",
+          "topics": ["Why Do We Need Political Parties?", "How Many Parties Should We Have?", "National Political Parties", "State Parties", "Challenges to Political Parties"],
+          "estimated_hours": 8,
+          "weightage": "high"
+        },
+        {
+          "id": "sst-10-civ-ch07",
+          "order": 19,
+          "name": "Outcomes of Democracy",
+          "description": "Assessing democracy",
+          "topics": ["How Do We Assess Democracy's Outcomes?", "Accountable, Responsive and Legitimate Government", "Economic Growth and Development", "Reduction of Inequality and Poverty", "Accommodation of Social Diversity", "Dignity and Freedom of the Citizens"],
+          "estimated_hours": 6,
+          "weightage": "medium"
+        },
+        {
+          "id": "sst-10-civ-ch08",
+          "order": 20,
+          "name": "Challenges to Democracy",
+          "description": "Foundational and expansion challenges",
+          "topics": ["Thinking about Challenges", "Foundational Challenge", "Challenge of Expansion", "Deepening of Democracy"],
+          "estimated_hours": 6,
+          "weightage": "medium"
+        },
+        {
+          "id": "sst-10-eco-ch01",
+          "order": 21,
+          "name": "Development",
+          "description": "Understanding development",
+          "topics": ["What Development Promises - Different People, Different Goals", "Income and Other Goals", "National Development", "How to Compare Different Countries?", "Income and Other Criteria", "Public Facilities", "Sustainability of Development"],
+          "estimated_hours": 6,
+          "weightage": "high"
+        },
+        {
+          "id": "sst-10-eco-ch02",
+          "order": 22,
+          "name": "Sectors of the Indian Economy",
+          "description": "Primary, secondary, and tertiary sectors",
+          "topics": ["Sectors of Economic Activities", "Comparing the Three Sectors", "Primary, Secondary and Tertiary Sectors in India", "Division of Sectors as Organised and Unorganised", "Sectors in Terms of Ownership"],
+          "estimated_hours": 8,
+          "weightage": "high"
+        },
+        {
+          "id": "sst-10-eco-ch03",
+          "order": 23,
+          "name": "Money and Credit",
+          "description": "Money, credit, and banking",
+          "topics": ["Money as a Medium of Exchange", "Modern Forms of Money", "Loan Activities of Banks", "Two Different Credit Situations", "Terms of Credit", "Formal Sector Credit in India", "Self-Help Groups for the Poor"],
+          "estimated_hours": 8,
+          "weightage": "high"
+        },
+        {
+          "id": "sst-10-eco-ch04",
+          "order": 24,
+          "name": "Globalisation and the Indian Economy",
+          "description": "Globalisation and its impact",
+          "topics": ["Production Across Countries", "Interlinking Production Across Countries", "Foreign Trade and Integration of Markets", "What is Globalisation?", "Factors that have Enabled Globalisation", "World Trade Organisation", "Impact of Globalisation in India", "The Struggle for a Fair Globalisation"],
+          "estimated_hours": 8,
+          "weightage": "high"
+        }
+      ]
+    },
+    {
+      "id": "english-10",
+      "name": "English",
+      "icon": "book-open",
+      "color": "#8B5CF6",
+      "total_chapters": 22,
+      "chapters": [
+        {
+          "id": "eng-10-ff-ch01",
+          "order": 1,
+          "name": "A Letter to God",
+          "description": "A story about unshakeable faith",
+          "topics": ["Reading Comprehension", "Faith and Belief", "Vocabulary"],
+          "estimated_hours": 4,
+          "weightage": "high"
+        },
+        {
+          "id": "eng-10-ff-ch02",
+          "order": 2,
+          "name": "Nelson Mandela: Long Walk to Freedom",
+          "description": "Mandela's autobiography excerpt",
+          "topics": ["Autobiography", "Freedom Struggle", "Leadership"],
+          "estimated_hours": 5,
+          "weightage": "high"
+        },
+        {
+          "id": "eng-10-ff-ch03",
+          "order": 3,
+          "name": "Two Stories about Flying",
+          "description": "His First Flight and Black Aeroplane",
+          "topics": ["Adventure", "Fear and Courage", "Mystery"],
+          "estimated_hours": 5,
+          "weightage": "medium"
+        },
+        {
+          "id": "eng-10-ff-ch04",
+          "order": 4,
+          "name": "From the Diary of Anne Frank",
+          "description": "Anne Frank's diary entries",
+          "topics": ["Diary Writing", "World War II", "Adolescence"],
+          "estimated_hours": 5,
+          "weightage": "high"
+        },
+        {
+          "id": "eng-10-ff-ch05",
+          "order": 5,
+          "name": "The Hundred Dresses - I & II",
+          "description": "A story about bullying and acceptance",
+          "topics": ["Bullying", "Friendship", "Acceptance"],
+          "estimated_hours": 6,
+          "weightage": "high"
+        },
+        {
+          "id": "eng-10-ff-ch06",
+          "order": 6,
+          "name": "Glimpses of India",
+          "description": "Three stories about India",
+          "topics": ["Indian Culture", "Regional Diversity", "Traditions"],
+          "estimated_hours": 6,
+          "weightage": "medium"
+        },
+        {
+          "id": "eng-10-ff-ch07",
+          "order": 7,
+          "name": "Mijbil the Otter",
+          "description": "A story about an unusual pet",
+          "topics": ["Pet Stories", "Human-Animal Bond", "Adventure"],
+          "estimated_hours": 4,
+          "weightage": "medium"
+        },
+        {
+          "id": "eng-10-ff-ch08",
+          "order": 8,
+          "name": "Madam Rides the Bus",
+          "description": "A child's first bus journey",
+          "topics": ["Coming of Age", "Curiosity", "Life and Death"],
+          "estimated_hours": 4,
+          "weightage": "medium"
+        },
+        {
+          "id": "eng-10-ff-ch09",
+          "order": 9,
+          "name": "The Sermon at Benares",
+          "description": "Buddha's teaching about death",
+          "topics": ["Buddhism", "Philosophy", "Life Lessons"],
+          "estimated_hours": 4,
+          "weightage": "high"
+        },
+        {
+          "id": "eng-10-ff-ch10",
+          "order": 10,
+          "name": "The Proposal",
+          "description": "A one-act play by Chekhov",
+          "topics": ["Drama", "Comedy", "Character Study"],
+          "estimated_hours": 5,
+          "weightage": "medium"
+        },
+        {
+          "id": "eng-10-poem-ch01",
+          "order": 11,
+          "name": "Dust of Snow",
+          "description": "Robert Frost's poem about nature",
+          "topics": ["Poetry Analysis", "Nature", "Mood Change"],
+          "estimated_hours": 2,
+          "weightage": "high"
+        },
+        {
+          "id": "eng-10-poem-ch02",
+          "order": 12,
+          "name": "Fire and Ice",
+          "description": "Robert Frost's poem about destruction",
+          "topics": ["Poetry Analysis", "Symbolism", "Human Nature"],
+          "estimated_hours": 2,
+          "weightage": "high"
+        },
+        {
+          "id": "eng-10-poem-ch03",
+          "order": 13,
+          "name": "A Tiger in the Zoo",
+          "description": "A poem about captivity",
+          "topics": ["Poetry Analysis", "Freedom", "Wildlife"],
+          "estimated_hours": 3,
+          "weightage": "medium"
+        },
+        {
+          "id": "eng-10-poem-ch04",
+          "order": 14,
+          "name": "How to Tell Wild Animals",
+          "description": "A humorous poem about animals",
+          "topics": ["Poetry Analysis", "Humor", "Wildlife"],
+          "estimated_hours": 3,
+          "weightage": "medium"
+        },
+        {
+          "id": "eng-10-poem-ch05",
+          "order": 15,
+          "name": "The Ball Poem",
+          "description": "A poem about loss and growing up",
+          "topics": ["Poetry Analysis", "Loss", "Maturity"],
+          "estimated_hours": 3,
+          "weightage": "medium"
+        },
+        {
+          "id": "eng-10-poem-ch06",
+          "order": 16,
+          "name": "Amanda!",
+          "description": "A poem about a child's imagination",
+          "topics": ["Poetry Analysis", "Childhood", "Freedom"],
+          "estimated_hours": 3,
+          "weightage": "medium"
+        },
+        {
+          "id": "eng-10-poem-ch07",
+          "order": 17,
+          "name": "Animals",
+          "description": "Walt Whitman's poem",
+          "topics": ["Poetry Analysis", "Nature", "Human vs Animal"],
+          "estimated_hours": 3,
+          "weightage": "medium"
+        },
+        {
+          "id": "eng-10-poem-ch08",
+          "order": 18,
+          "name": "The Trees",
+          "description": "Adrienne Rich's poem about nature",
+          "topics": ["Poetry Analysis", "Nature", "Freedom"],
+          "estimated_hours": 3,
+          "weightage": "medium"
+        },
+        {
+          "id": "eng-10-poem-ch09",
+          "order": 19,
+          "name": "Fog",
+          "description": "Carl Sandburg's short poem",
+          "topics": ["Poetry Analysis", "Imagery", "Nature"],
+          "estimated_hours": 2,
+          "weightage": "low"
+        },
+        {
+          "id": "eng-10-poem-ch10",
+          "order": 20,
+          "name": "The Tale of Custard the Dragon",
+          "description": "A humorous ballad",
+          "topics": ["Poetry Analysis", "Humor", "Bravery"],
+          "estimated_hours": 3,
+          "weightage": "medium"
+        },
+        {
+          "id": "eng-10-poem-ch11",
+          "order": 21,
+          "name": "For Anne Gregory",
+          "description": "W.B. Yeats' poem about beauty",
+          "topics": ["Poetry Analysis", "Beauty", "True Love"],
+          "estimated_hours": 3,
+          "weightage": "medium"
+        },
+        {
+          "id": "eng-10-grammar",
+          "order": 22,
+          "name": "Grammar and Writing Skills",
+          "description": "Grammar and various writing formats",
+          "topics": ["Tenses", "Modals", "Determiners", "Subject-Verb Concord", "Reported Speech", "Commands and Requests", "Letter Writing", "Article Writing", "Story Writing"],
+          "estimated_hours": 18,
+          "weightage": "high"
+        }
+      ]
+    },
+    {
+      "id": "hindi-10",
+      "name": "Hindi",
+      "icon": "languages",
+      "color": "#EF4444",
+      "total_chapters": 17,
+      "chapters": [
+        {
+          "id": "hindi-10-ch01",
+          "order": 1,
+          "name": "Sakhi",
+          "description": "Kabir and Meera's poetry",
+          "topics": ["Poetry", "Bhakti Literature", "Devotion"],
+          "estimated_hours": 5,
+          "weightage": "high"
+        },
+        {
+          "id": "hindi-10-ch02",
+          "order": 2,
+          "name": "Ram Lakshman Parshuram Samvad",
+          "description": "Tulsidas' Ramcharitmanas excerpt",
+          "topics": ["Epic Poetry", "Character Analysis", "Values"],
+          "estimated_hours": 6,
+          "weightage": "high"
+        },
+        {
+          "id": "hindi-10-ch03",
+          "order": 3,
+          "name": "Atmakatha",
+          "description": "Autobiography by Jaishankar Prasad",
+          "topics": ["Poetry", "Self-reflection", "Life Journey"],
+          "estimated_hours": 4,
+          "weightage": "medium"
+        },
+        {
+          "id": "hindi-10-ch04",
+          "order": 4,
+          "name": "Utsah and Aut Chal",
+          "description": "Suryakant Tripathi Nirala's poems",
+          "topics": ["Poetry", "Nature", "Inspiration"],
+          "estimated_hours": 4,
+          "weightage": "medium"
+        },
+        {
+          "id": "hindi-10-ch05",
+          "order": 5,
+          "name": "Yeh Danturit Muskan and Fasal",
+          "description": "Nagarjun's poems",
+          "topics": ["Poetry", "Rural Life", "Imagery"],
+          "estimated_hours": 4,
+          "weightage": "medium"
+        },
+        {
+          "id": "hindi-10-ch06",
+          "order": 6,
+          "name": "Chhaya Mat Chhoona",
+          "description": "Girija Kumar Mathur's poem",
+          "topics": ["Poetry", "Memories", "Longing"],
+          "estimated_hours": 4,
+          "weightage": "medium"
+        },
+        {
+          "id": "hindi-10-ch07",
+          "order": 7,
+          "name": "Kanyadan",
+          "description": "Rituraj's poem on daughter's marriage",
+          "topics": ["Poetry", "Social Issues", "Women's Life"],
+          "estimated_hours": 4,
+          "weightage": "high"
+        },
+        {
+          "id": "hindi-10-ch08",
+          "order": 8,
+          "name": "Sangatkar",
+          "description": "Manglesh Dabral's poem",
+          "topics": ["Poetry", "Music", "Collaboration"],
+          "estimated_hours": 4,
+          "weightage": "medium"
+        },
+        {
+          "id": "hindi-10-prose-ch01",
+          "order": 9,
+          "name": "Netaji Ka Chashma",
+          "description": "Story about patriotism",
+          "topics": ["Prose", "Patriotism", "National Pride"],
+          "estimated_hours": 5,
+          "weightage": "high"
+        },
+        {
+          "id": "hindi-10-prose-ch02",
+          "order": 10,
+          "name": "Balgobin Bhagat",
+          "description": "Character sketch by Rambriksh Benipuri",
+          "topics": ["Prose", "Character Study", "Rural Life"],
+          "estimated_hours": 5,
+          "weightage": "high"
+        },
+        {
+          "id": "hindi-10-prose-ch03",
+          "order": 11,
+          "name": "Lakhnavi Andaaz",
+          "description": "Story about Lucknowi culture",
+          "topics": ["Prose", "Culture", "Humor"],
+          "estimated_hours": 5,
+          "weightage": "medium"
+        },
+        {
+          "id": "hindi-10-prose-ch04",
+          "order": 12,
+          "name": "Manviya Karuna Ki Divya Chamak",
+          "description": "Father Camille Bulcke's contribution",
+          "topics": ["Prose", "Hindi Literature", "Contribution"],
+          "estimated_hours": 5,
+          "weightage": "medium"
+        },
+        {
+          "id": "hindi-10-prose-ch05",
+          "order": 13,
+          "name": "Ek Kahani Yeh Bhi",
+          "description": "Manu Bhandari's autobiography",
+          "topics": ["Autobiography", "Women's Writing", "Life Journey"],
+          "estimated_hours": 5,
+          "weightage": "high"
+        },
+        {
+          "id": "hindi-10-prose-ch06",
+          "order": 14,
+          "name": "Nowt",
+          "description": "Yashpal's story",
+          "topics": ["Prose", "Social Commentary", "Values"],
+          "estimated_hours": 5,
+          "weightage": "medium"
+        },
+        {
+          "id": "hindi-10-prose-ch07",
+          "order": 15,
+          "name": "Sapno Ke Se Din",
+          "description": "Gurudayal Singh's childhood memories",
+          "topics": ["Prose", "Childhood", "School Days"],
+          "estimated_hours": 5,
+          "weightage": "medium"
+        },
+        {
+          "id": "hindi-10-prose-ch08",
+          "order": 16,
+          "name": "Tantara Vamiro Katha",
+          "description": "A folk tale from Jaintia hills",
+          "topics": ["Folk Tale", "Tribal Literature", "Legend"],
+          "estimated_hours": 4,
+          "weightage": "low"
+        },
+        {
+          "id": "hindi-10-grammar",
+          "order": 17,
+          "name": "Vyakaran evam Rachna",
+          "description": "Grammar and creative writing",
+          "topics": ["Vakya Bhed", "Vakya Parivartan", "Samas", "Muhavare", "Anuched Lekhan", "Patra Lekhan", "Vigyapan Lekhan"],
+          "estimated_hours": 15,
+          "weightage": "high"
+        }
+      ]
+    }
+  ]
+}

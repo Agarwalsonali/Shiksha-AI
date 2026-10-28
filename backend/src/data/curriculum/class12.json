@@ -1,0 +1,726 @@
+{
+  "class": 12,
+  "board": "CBSE",
+  "subjects": [
+    {
+      "id": "physics-12",
+      "name": "Physics",
+      "icon": "atom",
+      "color": "#3B82F6",
+      "total_chapters": 14,
+      "chapters": [
+        {
+          "id": "phy-12-ch01",
+          "order": 1,
+          "name": "Electric Charges and Fields",
+          "description": "Coulomb's law and electric field",
+          "topics": ["Electric Charge", "Conductors and Insulators", "Charging by Induction", "Basic Properties of Electric Charge", "Coulomb's Law", "Forces between Multiple Charges", "Electric Field", "Electric Field Lines", "Electric Flux", "Electric Dipole", "Dipole in a Uniform External Field", "Continuous Charge Distribution", "Gauss's Law", "Applications of Gauss's Law"],
+          "estimated_hours": 14,
+          "weightage": "high"
+        },
+        {
+          "id": "phy-12-ch02",
+          "order": 2,
+          "name": "Electrostatic Potential and Capacitance",
+          "description": "Electric potential and capacitors",
+          "topics": ["Electrostatic Potential", "Potential due to a Point Charge", "Potential due to an Electric Dipole", "Potential due to a System of Charges", "Equipotential Surfaces", "Relation between Field and Potential", "Potential Energy of a System of Charges", "Potential Energy in an External Field", "Electrostatics of Conductors", "Dielectrics and Polarisation", "Capacitors and Capacitance", "The Parallel Plate Capacitor", "Effect of Dielectric on Capacitance", "Combination of Capacitors", "Energy Stored in a Capacitor"],
+          "estimated_hours": 14,
+          "weightage": "high"
+        },
+        {
+          "id": "phy-12-ch03",
+          "order": 3,
+          "name": "Current Electricity",
+          "description": "Electric current and circuits",
+          "topics": ["Electric Current", "Electric Currents in Conductors", "Ohm's Law", "Drift of Electrons and Origin of Resistivity", "Limitations of Ohm's Law", "Resistivity of Various Materials", "Temperature Dependence of Resistivity", "Electrical Energy and Power", "Combination of Resistors", "Cells, EMF, Internal Resistance", "Cells in Series and Parallel", "Kirchhoff's Rules", "Wheatstone Bridge", "Meter Bridge", "Potentiometer"],
+          "estimated_hours": 16,
+          "weightage": "high"
+        },
+        {
+          "id": "phy-12-ch04",
+          "order": 4,
+          "name": "Moving Charges and Magnetism",
+          "description": "Magnetic effects of current",
+          "topics": ["Magnetic Force", "Motion in a Magnetic Field", "Motion in Combined Electric and Magnetic Fields", "Magnetic Field due to a Current Element", "Magnetic Field on the Axis of a Circular Current Loop", "Ampere's Circuital Law", "The Solenoid and the Toroid", "Force between Two Parallel Currents", "Torque on Current Loop", "The Moving Coil Galvanometer"],
+          "estimated_hours": 14,
+          "weightage": "high"
+        },
+        {
+          "id": "phy-12-ch05",
+          "order": 5,
+          "name": "Magnetism and Matter",
+          "description": "Magnetic properties of materials",
+          "topics": ["The Bar Magnet", "Magnetism and Gauss's Law", "The Earth's Magnetism", "Magnetisation and Magnetic Intensity", "Magnetic Properties of Materials", "Permanent Magnets and Electromagnets"],
+          "estimated_hours": 8,
+          "weightage": "medium"
+        },
+        {
+          "id": "phy-12-ch06",
+          "order": 6,
+          "name": "Electromagnetic Induction",
+          "description": "Faraday's laws and inductance",
+          "topics": ["The Experiments of Faraday and Henry", "Magnetic Flux", "Faraday's Law of Induction", "Lenz's Law and Conservation of Energy", "Motional Electromotive Force", "Energy Consideration", "Eddy Currents", "Inductance", "AC Generator"],
+          "estimated_hours": 12,
+          "weightage": "high"
+        },
+        {
+          "id": "phy-12-ch07",
+          "order": 7,
+          "name": "Alternating Current",
+          "description": "AC circuits and transformers",
+          "topics": ["AC Voltage Applied to a Resistor", "Representation of AC Current and Voltage by Phasors", "AC Voltage Applied to an Inductor", "AC Voltage Applied to a Capacitor", "AC Voltage Applied to a Series LCR Circuit", "Power in AC Circuit", "LC Oscillations", "Transformers"],
+          "estimated_hours": 12,
+          "weightage": "high"
+        },
+        {
+          "id": "phy-12-ch08",
+          "order": 8,
+          "name": "Electromagnetic Waves",
+          "description": "EM spectrum and its applications",
+          "topics": ["Displacement Current", "Electromagnetic Waves", "Electromagnetic Spectrum"],
+          "estimated_hours": 6,
+          "weightage": "medium"
+        },
+        {
+          "id": "phy-12-ch09",
+          "order": 9,
+          "name": "Ray Optics and Optical Instruments",
+          "description": "Reflection, refraction, and optical devices",
+          "topics": ["Reflection of Light by Spherical Mirrors", "Refraction", "Total Internal Reflection", "Refraction at Spherical Surfaces and by Lenses", "Refraction through a Prism", "Dispersion by a Prism", "Some Natural Phenomena due to Sunlight", "Optical Instruments"],
+          "estimated_hours": 16,
+          "weightage": "high"
+        },
+        {
+          "id": "phy-12-ch10",
+          "order": 10,
+          "name": "Wave Optics",
+          "description": "Interference, diffraction, and polarisation",
+          "topics": ["Huygens Principle", "Refraction and Reflection of Plane Waves", "Coherent and Incoherent Addition of Waves", "Interference of Light Waves and Young's Experiment", "Diffraction", "Polarisation"],
+          "estimated_hours": 12,
+          "weightage": "high"
+        },
+        {
+          "id": "phy-12-ch11",
+          "order": 11,
+          "name": "Dual Nature of Radiation and Matter",
+          "description": "Photoelectric effect and matter waves",
+          "topics": ["Electron Emission", "Photoelectric Effect", "Experimental Study of Photoelectric Effect", "Photoelectric Effect and Wave Theory of Light", "Einstein's Photoelectric Equation", "Particle Nature of Light", "Wave Nature of Matter"],
+          "estimated_hours": 10,
+          "weightage": "high"
+        },
+        {
+          "id": "phy-12-ch12",
+          "order": 12,
+          "name": "Atoms",
+          "description": "Atomic models and spectra",
+          "topics": ["Alpha-particle Scattering and Rutherford's Nuclear Model", "Atomic Spectra", "Bohr Model of the Hydrogen Atom", "The Line Spectra of the Hydrogen Atom", "de Broglie's Explanation"],
+          "estimated_hours": 10,
+          "weightage": "high"
+        },
+        {
+          "id": "phy-12-ch13",
+          "order": 13,
+          "name": "Nuclei",
+          "description": "Nuclear physics and radioactivity",
+          "topics": ["Atomic Masses and Composition of Nucleus", "Size of the Nucleus", "Mass-Energy and Nuclear Binding Energy", "Nuclear Force", "Radioactivity", "Nuclear Energy"],
+          "estimated_hours": 10,
+          "weightage": "high"
+        },
+        {
+          "id": "phy-12-ch14",
+          "order": 14,
+          "name": "Semiconductor Electronics",
+          "description": "Semiconductors and digital electronics",
+          "topics": ["Classification of Metals, Conductors and Semiconductors", "Intrinsic Semiconductor", "Extrinsic Semiconductor", "p-n Junction", "Semiconductor Diode", "Application of Junction Diode as a Rectifier", "Special Purpose p-n Junction Diodes", "Junction Transistor", "Digital Electronics and Logic Gates"],
+          "estimated_hours": 14,
+          "weightage": "high"
+        }
+      ]
+    },
+    {
+      "id": "chemistry-12",
+      "name": "Chemistry",
+      "icon": "beaker",
+      "color": "#10B981",
+      "total_chapters": 16,
+      "chapters": [
+        {
+          "id": "chem-12-ch01",
+          "order": 1,
+          "name": "The Solid State",
+          "description": "Crystal structures and properties",
+          "topics": ["General Characteristics of Solid State", "Amorphous and Crystalline Solids", "Classification of Crystalline Solids", "Crystal Lattices and Unit Cells", "Number of Atoms in a Unit Cell", "Close Packed Structures", "Packing Efficiency", "Calculations Involving Unit Cell Dimensions", "Imperfections in Solids", "Electrical Properties", "Magnetic Properties"],
+          "estimated_hours": 12,
+          "weightage": "high"
+        },
+        {
+          "id": "chem-12-ch02",
+          "order": 2,
+          "name": "Solutions",
+          "description": "Types of solutions and colligative properties",
+          "topics": ["Types of Solutions", "Expressing Concentration of Solutions", "Solubility", "Vapour Pressure of Liquid Solutions", "Ideal and Non-ideal Solutions", "Colligative Properties and Determination of Molar Mass", "Abnormal Molar Masses"],
+          "estimated_hours": 14,
+          "weightage": "high"
+        },
+        {
+          "id": "chem-12-ch03",
+          "order": 3,
+          "name": "Electrochemistry",
+          "description": "Electrochemical cells and electrolysis",
+          "topics": ["Electrochemical Cells", "Galvanic Cells", "Nernst Equation", "Conductance of Electrolytic Solutions", "Electrolytic Cells and Electrolysis", "Batteries", "Fuel Cells", "Corrosion"],
+          "estimated_hours": 14,
+          "weightage": "high"
+        },
+        {
+          "id": "chem-12-ch04",
+          "order": 4,
+          "name": "Chemical Kinetics",
+          "description": "Rate of reactions and mechanisms",
+          "topics": ["Rate of a Chemical Reaction", "Factors Influencing Rate of a Reaction", "Integrated Rate Equations", "Pseudo First Order Reaction", "Temperature Dependence of the Rate of a Reaction", "Collision Theory of Chemical Reactions"],
+          "estimated_hours": 12,
+          "weightage": "high"
+        },
+        {
+          "id": "chem-12-ch05",
+          "order": 5,
+          "name": "Surface Chemistry",
+          "description": "Adsorption, catalysis, and colloids",
+          "topics": ["Adsorption", "Catalysis", "Colloids", "Classification of Colloids", "Emulsions", "Colloids Around Us"],
+          "estimated_hours": 8,
+          "weightage": "medium"
+        },
+        {
+          "id": "chem-12-ch06",
+          "order": 6,
+          "name": "General Principles and Processes of Isolation of Elements",
+          "description": "Extraction of metals",
+          "topics": ["Occurrence of Metals", "Concentration of Ores", "Extraction of Crude Metal from Concentrated Ore", "Thermodynamic Principles of Metallurgy", "Electrochemical Principles of Metallurgy", "Oxidation Reduction", "Refining"],
+          "estimated_hours": 8,
+          "weightage": "medium"
+        },
+        {
+          "id": "chem-12-ch07",
+          "order": 7,
+          "name": "The p-Block Elements",
+          "description": "Group 15, 16, 17, and 18 elements",
+          "topics": ["Group 15 Elements", "Dinitrogen", "Ammonia", "Oxides of Nitrogen", "Nitric Acid", "Phosphorus", "Phosphine", "Phosphorus Halides", "Oxoacids of Phosphorus", "Group 16 Elements", "Dioxygen", "Simple Oxides", "Ozone", "Sulphur", "Sulphur Dioxide", "Oxoacids of Sulphur", "Sulphuric Acid", "Group 17 Elements", "Chlorine", "Hydrogen Chloride", "Oxoacids of Halogens", "Interhalogen Compounds", "Group 18 Elements"],
+          "estimated_hours": 16,
+          "weightage": "high"
+        },
+        {
+          "id": "chem-12-ch08",
+          "order": 8,
+          "name": "The d and f Block Elements",
+          "description": "Transition and inner transition elements",
+          "topics": ["Position in the Periodic Table", "Electronic Configurations of the d-Block Elements", "General Properties of the Transition Elements", "Some Important Compounds of Transition Elements", "The Lanthanoids", "The Actinoids", "Some Applications of d- and f-Block Elements"],
+          "estimated_hours": 12,
+          "weightage": "high"
+        },
+        {
+          "id": "chem-12-ch09",
+          "order": 9,
+          "name": "Coordination Compounds",
+          "description": "Werner's theory and bonding in complexes",
+          "topics": ["Werner's Theory of Coordination Compounds", "Definitions of Some Important Terms", "Nomenclature of Coordination Compounds", "Isomerism in Coordination Compounds", "Bonding in Coordination Compounds", "Bonding in Metal Carbonyls", "Importance and Applications of Coordination Compounds"],
+          "estimated_hours": 14,
+          "weightage": "high"
+        },
+        {
+          "id": "chem-12-ch10",
+          "order": 10,
+          "name": "Haloalkanes and Haloarenes",
+          "description": "Organic halogen compounds",
+          "topics": ["Classification", "Nomenclature", "Nature of C-X Bond", "Methods of Preparation", "Physical Properties", "Chemical Reactions", "Polyhalogen Compounds"],
+          "estimated_hours": 12,
+          "weightage": "high"
+        },
+        {
+          "id": "chem-12-ch11",
+          "order": 11,
+          "name": "Alcohols, Phenols and Ethers",
+          "description": "Oxygen-containing organic compounds",
+          "topics": ["Classification", "Nomenclature", "Structures of Functional Groups", "Alcohols and Phenols", "Some Commercially Important Alcohols", "Ethers"],
+          "estimated_hours": 14,
+          "weightage": "high"
+        },
+        {
+          "id": "chem-12-ch12",
+          "order": 12,
+          "name": "Aldehydes, Ketones and Carboxylic Acids",
+          "description": "Carbonyl compounds and acids",
+          "topics": ["Nomenclature and Structure of Carbonyl Group", "Preparation of Aldehydes and Ketones", "Physical Properties", "Chemical Reactions", "Uses of Aldehydes and Ketones", "Nomenclature and Structure of Carboxyl Group", "Methods of Preparation of Carboxylic Acids", "Physical Properties", "Chemical Reactions", "Uses of Carboxylic Acids"],
+          "estimated_hours": 16,
+          "weightage": "high"
+        },
+        {
+          "id": "chem-12-ch13",
+          "order": 13,
+          "name": "Amines",
+          "description": "Nitrogen-containing organic compounds",
+          "topics": ["Structure of Amines", "Classification", "Nomenclature", "Preparation of Amines", "Physical Properties", "Chemical Reactions", "Method of Preparation of Diazonium Salts", "Physical Properties", "Chemical Reactions", "Importance of Diazonium Salts in Synthesis of Aromatic Compounds"],
+          "estimated_hours": 12,
+          "weightage": "high"
+        },
+        {
+          "id": "chem-12-ch14",
+          "order": 14,
+          "name": "Biomolecules",
+          "description": "Carbohydrates, proteins, and nucleic acids",
+          "topics": ["Carbohydrates", "Proteins", "Enzymes", "Vitamins", "Nucleic Acids"],
+          "estimated_hours": 10,
+          "weightage": "medium"
+        },
+        {
+          "id": "chem-12-ch15",
+          "order": 15,
+          "name": "Polymers",
+          "description": "Classification and types of polymers",
+          "topics": ["Classification of Polymers", "Types of Polymerisation Reactions", "Molecular Mass of Polymers", "Biodegradable Polymers", "Polymers of Commercial Importance"],
+          "estimated_hours": 6,
+          "weightage": "medium"
+        },
+        {
+          "id": "chem-12-ch16",
+          "order": 16,
+          "name": "Chemistry in Everyday Life",
+          "description": "Applications of chemistry",
+          "topics": ["Drugs and their Classification", "Drug-Target Interaction", "Therapeutic Action of Different Classes of Drugs", "Chemicals in Food", "Cleansing Agents"],
+          "estimated_hours": 6,
+          "weightage": "low"
+        }
+      ]
+    },
+    {
+      "id": "mathematics-12",
+      "name": "Mathematics",
+      "icon": "calculator",
+      "color": "#F59E0B",
+      "total_chapters": 13,
+      "chapters": [
+        {
+          "id": "math-12-ch01",
+          "order": 1,
+          "name": "Relations and Functions",
+          "description": "Types of relations and functions",
+          "topics": ["Types of Relations", "Types of Functions", "Composition of Functions and Invertible Function", "Binary Operations"],
+          "estimated_hours": 12,
+          "weightage": "high"
+        },
+        {
+          "id": "math-12-ch02",
+          "order": 2,
+          "name": "Inverse Trigonometric Functions",
+          "description": "Properties of inverse trigonometric functions",
+          "topics": ["Basic Concepts", "Properties of Inverse Trigonometric Functions"],
+          "estimated_hours": 10,
+          "weightage": "high"
+        },
+        {
+          "id": "math-12-ch03",
+          "order": 3,
+          "name": "Matrices",
+          "description": "Operations on matrices",
+          "topics": ["Matrix", "Types of Matrices", "Operations on Matrices", "Transpose of a Matrix", "Symmetric and Skew Symmetric Matrices", "Elementary Operation on a Matrix", "Invertible Matrices"],
+          "estimated_hours": 14,
+          "weightage": "high"
+        },
+        {
+          "id": "math-12-ch04",
+          "order": 4,
+          "name": "Determinants",
+          "description": "Properties and applications of determinants",
+          "topics": ["Determinant", "Properties of Determinants", "Area of a Triangle", "Minors and Cofactors", "Adjoint and Inverse of a Matrix", "Applications of Determinants and Matrices"],
+          "estimated_hours": 14,
+          "weightage": "high"
+        },
+        {
+          "id": "math-12-ch05",
+          "order": 5,
+          "name": "Continuity and Differentiability",
+          "description": "Limits, continuity, and derivatives",
+          "topics": ["Continuity", "Differentiability", "Exponential and Logarithmic Functions", "Logarithmic Differentiation", "Derivatives of Functions in Parametric Forms", "Second Order Derivative", "Mean Value Theorem"],
+          "estimated_hours": 16,
+          "weightage": "high"
+        },
+        {
+          "id": "math-12-ch06",
+          "order": 6,
+          "name": "Application of Derivatives",
+          "description": "Rate of change, tangents, and maxima/minima",
+          "topics": ["Rate of Change of Quantities", "Increasing and Decreasing Functions", "Tangents and Normals", "Approximations", "Maxima and Minima"],
+          "estimated_hours": 16,
+          "weightage": "high"
+        },
+        {
+          "id": "math-12-ch07",
+          "order": 7,
+          "name": "Integrals",
+          "description": "Integration techniques",
+          "topics": ["Integration as an Inverse Process of Differentiation", "Methods of Integration", "Integrals of Some Particular Functions", "Integration by Partial Fractions", "Integration by Parts", "Definite Integral", "Fundamental Theorem of Calculus", "Evaluation of Definite Integrals by Substitution", "Some Properties of Definite Integrals"],
+          "estimated_hours": 20,
+          "weightage": "high"
+        },
+        {
+          "id": "math-12-ch08",
+          "order": 8,
+          "name": "Application of Integrals",
+          "description": "Area under curves",
+          "topics": ["Area under Simple Curves", "Area between Two Curves"],
+          "estimated_hours": 10,
+          "weightage": "high"
+        },
+        {
+          "id": "math-12-ch09",
+          "order": 9,
+          "name": "Differential Equations",
+          "description": "Solving differential equations",
+          "topics": ["Basic Concepts", "General and Particular Solutions", "Formation of a Differential Equation", "Methods of Solving First Order, First Degree Differential Equations"],
+          "estimated_hours": 14,
+          "weightage": "high"
+        },
+        {
+          "id": "math-12-ch10",
+          "order": 10,
+          "name": "Vector Algebra",
+          "description": "Vectors and their operations",
+          "topics": ["Some Basic Concepts", "Types of Vectors", "Addition of Vectors", "Multiplication of a Vector by a Scalar", "Product of Two Vectors"],
+          "estimated_hours": 12,
+          "weightage": "high"
+        },
+        {
+          "id": "math-12-ch11",
+          "order": 11,
+          "name": "Three Dimensional Geometry",
+          "description": "Lines and planes in 3D",
+          "topics": ["Direction Cosines and Direction Ratios", "Equation of a Line in Space", "Angle between Two Lines", "Shortest Distance between Two Lines", "Plane", "Coplanarity of Two Lines", "Angle between Two Planes", "Distance of a Point from a Plane", "Angle between a Line and a Plane"],
+          "estimated_hours": 14,
+          "weightage": "high"
+        },
+        {
+          "id": "math-12-ch12",
+          "order": 12,
+          "name": "Linear Programming",
+          "description": "Optimization problems",
+          "topics": ["Linear Programming Problem and its Mathematical Formulation", "Graphical Method of Solving Linear Programming Problems", "Different Types of Linear Programming Problems"],
+          "estimated_hours": 10,
+          "weightage": "high"
+        },
+        {
+          "id": "math-12-ch13",
+          "order": 13,
+          "name": "Probability",
+          "description": "Conditional probability and Bayes' theorem",
+          "topics": ["Conditional Probability", "Multiplication Theorem on Probability", "Independent Events", "Bayes' Theorem", "Random Variables and its Probability Distributions", "Bernoulli Trials and Binomial Distribution"],
+          "estimated_hours": 14,
+          "weightage": "high"
+        }
+      ]
+    },
+    {
+      "id": "biology-12",
+      "name": "Biology",
+      "icon": "dna",
+      "color": "#EC4899",
+      "total_chapters": 16,
+      "chapters": [
+        {
+          "id": "bio-12-ch01",
+          "order": 1,
+          "name": "Reproduction in Organisms",
+          "description": "Modes of reproduction",
+          "topics": ["Asexual Reproduction", "Sexual Reproduction"],
+          "estimated_hours": 6,
+          "weightage": "medium"
+        },
+        {
+          "id": "bio-12-ch02",
+          "order": 2,
+          "name": "Sexual Reproduction in Flowering Plants",
+          "description": "Flower structure and fertilization",
+          "topics": ["Flower - A Fascinating Organ of Angiosperms", "Pre-fertilisation: Structures and Events", "Double Fertilisation", "Post-fertilisation: Structures and Events", "Apomixis and Polyembryony"],
+          "estimated_hours": 12,
+          "weightage": "high"
+        },
+        {
+          "id": "bio-12-ch03",
+          "order": 3,
+          "name": "Human Reproduction",
+          "description": "Human reproductive system and processes",
+          "topics": ["The Male Reproductive System", "The Female Reproductive System", "Gametogenesis", "Menstrual Cycle", "Fertilisation and Implantation", "Pregnancy and Embryonic Development", "Parturition and Lactation"],
+          "estimated_hours": 12,
+          "weightage": "high"
+        },
+        {
+          "id": "bio-12-ch04",
+          "order": 4,
+          "name": "Reproductive Health",
+          "description": "Reproductive health and contraception",
+          "topics": ["Reproductive Health - Problems and Strategies", "Population Explosion and Birth Control", "Medical Termination of Pregnancy", "Sexually Transmitted Diseases", "Infertility"],
+          "estimated_hours": 8,
+          "weightage": "medium"
+        },
+        {
+          "id": "bio-12-ch05",
+          "order": 5,
+          "name": "Principles of Inheritance and Variation",
+          "description": "Mendelian genetics and beyond",
+          "topics": ["Mendel's Laws of Inheritance", "Inheritance of One Gene", "Inheritance of Two Genes", "Sex Determination", "Mutation", "Genetic Disorders"],
+          "estimated_hours": 14,
+          "weightage": "high"
+        },
+        {
+          "id": "bio-12-ch06",
+          "order": 6,
+          "name": "Molecular Basis of Inheritance",
+          "description": "DNA, RNA, and gene expression",
+          "topics": ["The DNA", "The Search for Genetic Material", "RNA World", "Replication", "Transcription", "Genetic Code", "Translation", "Regulation of Gene Expression", "Human Genome Project", "DNA Fingerprinting"],
+          "estimated_hours": 16,
+          "weightage": "high"
+        },
+        {
+          "id": "bio-12-ch07",
+          "order": 7,
+          "name": "Evolution",
+          "description": "Origin and evolution of life",
+          "topics": ["Origin of Life", "Evolution of Life Forms", "What are the Evidences for Evolution?", "What is Adaptive Radiation?", "Biological Evolution", "Mechanism of Evolution", "Hardy-Weinberg Principle", "A Brief Account of Evolution", "Origin and Evolution of Man"],
+          "estimated_hours": 10,
+          "weightage": "high"
+        },
+        {
+          "id": "bio-12-ch08",
+          "order": 8,
+          "name": "Human Health and Disease",
+          "description": "Diseases and immunity",
+          "topics": ["Common Diseases in Humans", "Immunity", "AIDS", "Cancer", "Drugs and Alcohol Abuse"],
+          "estimated_hours": 12,
+          "weightage": "high"
+        },
+        {
+          "id": "bio-12-ch09",
+          "order": 9,
+          "name": "Strategies for Enhancement in Food Production",
+          "description": "Animal husbandry and plant breeding",
+          "topics": ["Animal Husbandry", "Plant Breeding", "Single Cell Proteins", "Tissue Culture"],
+          "estimated_hours": 8,
+          "weightage": "medium"
+        },
+        {
+          "id": "bio-12-ch10",
+          "order": 10,
+          "name": "Microbes in Human Welfare",
+          "description": "Beneficial microorganisms",
+          "topics": ["Microbes in Household Products", "Microbes in Industrial Products", "Microbes in Sewage Treatment", "Microbes in Production of Biogas", "Microbes as Biocontrol Agents", "Microbes as Biofertilisers"],
+          "estimated_hours": 8,
+          "weightage": "medium"
+        },
+        {
+          "id": "bio-12-ch11",
+          "order": 11,
+          "name": "Biotechnology: Principles and Processes",
+          "description": "Genetic engineering techniques",
+          "topics": ["Principles of Biotechnology", "Tools of Recombinant DNA Technology", "Processes of Recombinant DNA Technology"],
+          "estimated_hours": 12,
+          "weightage": "high"
+        },
+        {
+          "id": "bio-12-ch12",
+          "order": 12,
+          "name": "Biotechnology and its Applications",
+          "description": "Applications of biotechnology",
+          "topics": ["Biotechnological Applications in Agriculture", "Biotechnological Applications in Medicine", "Transgenic Animals", "Ethical Issues"],
+          "estimated_hours": 10,
+          "weightage": "high"
+        },
+        {
+          "id": "bio-12-ch13",
+          "order": 13,
+          "name": "Organisms and Populations",
+          "description": "Ecology at organism and population level",
+          "topics": ["Organism and Its Environment", "Populations"],
+          "estimated_hours": 10,
+          "weightage": "high"
+        },
+        {
+          "id": "bio-12-ch14",
+          "order": 14,
+          "name": "Ecosystem",
+          "description": "Structure and function of ecosystems",
+          "topics": ["Ecosystem Structure and Function", "Productivity", "Decomposition", "Energy Flow", "Ecological Pyramids", "Ecological Succession", "Nutrient Cycling", "Ecosystem Services"],
+          "estimated_hours": 12,
+          "weightage": "high"
+        },
+        {
+          "id": "bio-12-ch15",
+          "order": 15,
+          "name": "Biodiversity and Conservation",
+          "description": "Biodiversity and its conservation",
+          "topics": ["Biodiversity", "Patterns of Biodiversity", "The Importance of Species Diversity to the Ecosystem", "Loss of Biodiversity", "Biodiversity Conservation"],
+          "estimated_hours": 8,
+          "weightage": "high"
+        },
+        {
+          "id": "bio-12-ch16",
+          "order": 16,
+          "name": "Environmental Issues",
+          "description": "Pollution and environmental concerns",
+          "topics": ["Air Pollution and Its Control", "Water Pollution and Its Control", "Solid Wastes", "Agro-chemicals and their Effects", "Radioactive Wastes", "Greenhouse Effect and Global Warming", "Ozone Depletion in the Stratosphere", "Degradation by Improper Resource Utilisation and Maintenance", "Deforestation"],
+          "estimated_hours": 8,
+          "weightage": "medium"
+        }
+      ]
+    },
+    {
+      "id": "english-12",
+      "name": "English",
+      "icon": "book-open",
+      "color": "#8B5CF6",
+      "total_chapters": 16,
+      "chapters": [
+        {
+          "id": "eng-12-flamingo-ch01",
+          "order": 1,
+          "name": "The Last Lesson",
+          "description": "Alphonse Daudet's story about language and identity",
+          "topics": ["Reading Comprehension", "Patriotism", "Language Identity"],
+          "estimated_hours": 5,
+          "weightage": "high"
+        },
+        {
+          "id": "eng-12-flamingo-ch02",
+          "order": 2,
+          "name": "Lost Spring",
+          "description": "Stories of stolen childhood",
+          "topics": ["Social Issues", "Child Labour", "Poverty"],
+          "estimated_hours": 5,
+          "weightage": "high"
+        },
+        {
+          "id": "eng-12-flamingo-ch03",
+          "order": 3,
+          "name": "Deep Water",
+          "description": "William Douglas overcomes his fear",
+          "topics": ["Fear", "Determination", "Personal Growth"],
+          "estimated_hours": 5,
+          "weightage": "high"
+        },
+        {
+          "id": "eng-12-flamingo-ch04",
+          "order": 4,
+          "name": "The Rattrap",
+          "description": "A story about human goodness",
+          "topics": ["Human Nature", "Redemption", "Kindness"],
+          "estimated_hours": 5,
+          "weightage": "high"
+        },
+        {
+          "id": "eng-12-flamingo-ch05",
+          "order": 5,
+          "name": "Indigo",
+          "description": "Gandhi's Champaran movement",
+          "topics": ["Freedom Struggle", "Leadership", "Civil Disobedience"],
+          "estimated_hours": 5,
+          "weightage": "high"
+        },
+        {
+          "id": "eng-12-flamingo-ch06",
+          "order": 6,
+          "name": "Poets and Pancakes",
+          "description": "Life at Gemini Studios",
+          "topics": ["Film Industry", "Memoir", "Humor"],
+          "estimated_hours": 5,
+          "weightage": "medium"
+        },
+        {
+          "id": "eng-12-flamingo-ch07",
+          "order": 7,
+          "name": "The Interview",
+          "description": "The art of interviewing",
+          "topics": ["Journalism", "Communication", "Celebrity"],
+          "estimated_hours": 5,
+          "weightage": "medium"
+        },
+        {
+          "id": "eng-12-flamingo-ch08",
+          "order": 8,
+          "name": "Going Places",
+          "description": "Dreams and reality of adolescence",
+          "topics": ["Dreams", "Reality", "Growing Up"],
+          "estimated_hours": 5,
+          "weightage": "medium"
+        },
+        {
+          "id": "eng-12-poem-ch01",
+          "order": 9,
+          "name": "My Mother at Sixty-six",
+          "description": "Kamala Das's poem about aging",
+          "topics": ["Poetry Analysis", "Aging", "Mother-Daughter Bond"],
+          "estimated_hours": 3,
+          "weightage": "high"
+        },
+        {
+          "id": "eng-12-poem-ch02",
+          "order": 10,
+          "name": "An Elementary School Classroom in a Slum",
+          "description": "Stephen Spender's social commentary",
+          "topics": ["Poetry Analysis", "Social Inequality", "Education"],
+          "estimated_hours": 3,
+          "weightage": "high"
+        },
+        {
+          "id": "eng-12-poem-ch03",
+          "order": 11,
+          "name": "Keeping Quiet",
+          "description": "Pablo Neruda's call for introspection",
+          "topics": ["Poetry Analysis", "Peace", "Self-reflection"],
+          "estimated_hours": 3,
+          "weightage": "high"
+        },
+        {
+          "id": "eng-12-poem-ch04",
+          "order": 12,
+          "name": "A Thing of Beauty",
+          "description": "John Keats on beauty",
+          "topics": ["Poetry Analysis", "Beauty", "Nature"],
+          "estimated_hours": 3,
+          "weightage": "medium"
+        },
+        {
+          "id": "eng-12-poem-ch05",
+          "order": 13,
+          "name": "A Roadside Stand",
+          "description": "Robert Frost's social poem",
+          "topics": ["Poetry Analysis", "Rural Life", "Urbanization"],
+          "estimated_hours": 3,
+          "weightage": "medium"
+        },
+        {
+          "id": "eng-12-poem-ch06",
+          "order": 14,
+          "name": "Aunt Jennifer's Tigers",
+          "description": "Adrienne Rich on women's oppression",
+          "topics": ["Poetry Analysis", "Feminism", "Art"],
+          "estimated_hours": 3,
+          "weightage": "medium"
+        },
+        {
+          "id": "eng-12-vistas-ch01",
+          "order": 15,
+          "name": "The Third Level",
+          "description": "Jack Finney's story about escape",
+          "topics": ["Fantasy", "Escapism", "Time Travel"],
+          "estimated_hours": 4,
+          "weightage": "medium"
+        },
+        {
+          "id": "eng-12-grammar",
+          "order": 16,
+          "name": "Grammar and Writing Skills",
+          "description": "Advanced grammar and writing",
+          "topics": ["Tenses", "Voice Change", "Reported Speech", "Note Making", "Summary", "Article Writing", "Report Writing", "Letter Writing", "Debate Writing"],
+          "estimated_hours": 20,
+          "weightage": "high"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,798 @@
+{
+  "class": 11,
+  "board": "CBSE",
+  "subjects": [
+    {
+      "id": "physics-11",
+      "name": "Physics",
+      "icon": "atom",
+      "color": "#3B82F6",
+      "total_chapters": 15,
+      "chapters": [
+        {
+          "id": "phy-11-ch01",
+          "order": 1,
+          "name": "Physical World",
+          "description": "Introduction to physics and its scope",
+          "topics": ["What is Physics?", "Scope and Excitement of Physics", "Physics, Technology and Society", "Fundamental Forces in Nature", "Nature of Physical Laws"],
+          "estimated_hours": 4,
+          "weightage": "low"
+        },
+        {
+          "id": "phy-11-ch02",
+          "order": 2,
+          "name": "Units and Measurements",
+          "description": "Measurement systems and dimensional analysis",
+          "topics": ["The International System of Units", "Measurement of Length", "Measurement of Mass", "Measurement of Time", "Accuracy, Precision and Errors", "Significant Figures", "Dimensions of Physical Quantities", "Dimensional Analysis and its Applications"],
+          "estimated_hours": 10,
+          "weightage": "high"
+        },
+        {
+          "id": "phy-11-ch03",
+          "order": 3,
+          "name": "Motion in a Straight Line",
+          "description": "Kinematics in one dimension",
+          "topics": ["Position, Path Length and Displacement", "Average Velocity and Average Speed", "Instantaneous Velocity and Speed", "Acceleration", "Kinematic Equations", "Relative Velocity"],
+          "estimated_hours": 12,
+          "weightage": "high"
+        },
+        {
+          "id": "phy-11-ch04",
+          "order": 4,
+          "name": "Motion in a Plane",
+          "description": "Vectors and projectile motion",
+          "topics": ["Scalars and Vectors", "Multiplication of Vectors by Real Numbers", "Addition and Subtraction of Vectors", "Resolution of Vectors", "Vector Addition - Analytical Method", "Motion in a Plane", "Projectile Motion", "Uniform Circular Motion"],
+          "estimated_hours": 14,
+          "weightage": "high"
+        },
+        {
+          "id": "phy-11-ch05",
+          "order": 5,
+          "name": "Laws of Motion",
+          "description": "Newton's laws and their applications",
+          "topics": ["Aristotle's Fallacy", "Newton's First Law of Motion", "Newton's Second Law of Motion", "Newton's Third Law of Motion", "Conservation of Momentum", "Equilibrium of a Particle", "Common Forces in Mechanics", "Circular Motion", "Solving Problems in Mechanics"],
+          "estimated_hours": 14,
+          "weightage": "high"
+        },
+        {
+          "id": "phy-11-ch06",
+          "order": 6,
+          "name": "Work, Energy and Power",
+          "description": "Work-energy theorem and conservation of energy",
+          "topics": ["The Scalar Product", "Work", "Kinetic Energy", "Work Done by a Variable Force", "The Work-Energy Theorem", "Potential Energy", "Conservation of Mechanical Energy", "Power", "Collisions"],
+          "estimated_hours": 14,
+          "weightage": "high"
+        },
+        {
+          "id": "phy-11-ch07",
+          "order": 7,
+          "name": "System of Particles and Rotational Motion",
+          "description": "Centre of mass and rotational dynamics",
+          "topics": ["Centre of Mass", "Motion of Centre of Mass", "Linear Momentum of a System of Particles", "Vector Product of Two Vectors", "Angular Velocity", "Torque and Angular Momentum", "Equilibrium of a Rigid Body", "Moment of Inertia", "Kinematics of Rotational Motion", "Dynamics of Rotational Motion", "Angular Momentum in Case of Rotation", "Rolling Motion"],
+          "estimated_hours": 18,
+          "weightage": "high"
+        },
+        {
+          "id": "phy-11-ch08",
+          "order": 8,
+          "name": "Gravitation",
+          "description": "Universal law of gravitation and its applications",
+          "topics": ["Kepler's Laws", "Universal Law of Gravitation", "The Gravitational Constant", "Acceleration due to Gravity", "Acceleration due to Gravity below and above the Earth's Surface", "Gravitational Potential Energy", "Escape Speed", "Earth Satellites", "Energy of an Orbiting Satellite", "Geostationary and Polar Satellites", "Weightlessness"],
+          "estimated_hours": 12,
+          "weightage": "high"
+        },
+        {
+          "id": "phy-11-ch09",
+          "order": 9,
+          "name": "Mechanical Properties of Solids",
+          "description": "Elasticity and stress-strain relationships",
+          "topics": ["Elastic Behaviour of Solids", "Stress and Strain", "Hooke's Law", "Stress-Strain Curve", "Elastic Moduli", "Applications of Elastic Behaviour of Materials"],
+          "estimated_hours": 8,
+          "weightage": "medium"
+        },
+        {
+          "id": "phy-11-ch10",
+          "order": 10,
+          "name": "Mechanical Properties of Fluids",
+          "description": "Fluid statics and dynamics",
+          "topics": ["Pressure", "Pascal's Law", "Variation of Pressure with Depth", "Atmospheric Pressure", "Hydraulic Machines", "Streamline Flow", "Bernoulli's Principle", "Viscosity", "Reynolds Number", "Surface Tension"],
+          "estimated_hours": 12,
+          "weightage": "high"
+        },
+        {
+          "id": "phy-11-ch11",
+          "order": 11,
+          "name": "Thermal Properties of Matter",
+          "description": "Heat transfer and thermal expansion",
+          "topics": ["Temperature and Heat", "Thermal Expansion", "Specific Heat Capacity", "Calorimetry", "Change of State", "Heat Transfer", "Newton's Law of Cooling"],
+          "estimated_hours": 10,
+          "weightage": "medium"
+        },
+        {
+          "id": "phy-11-ch12",
+          "order": 12,
+          "name": "Thermodynamics",
+          "description": "Laws of thermodynamics",
+          "topics": ["Thermal Equilibrium", "Zeroth Law of Thermodynamics", "Heat, Internal Energy and Work", "First Law of Thermodynamics", "Specific Heat Capacity", "Thermodynamic State Variables", "Thermodynamic Processes", "Heat Engines", "Refrigerators and Heat Pumps", "Second Law of Thermodynamics", "Reversible and Irreversible Processes", "Carnot Engine"],
+          "estimated_hours": 14,
+          "weightage": "high"
+        },
+        {
+          "id": "phy-11-ch13",
+          "order": 13,
+          "name": "Kinetic Theory",
+          "description": "Kinetic theory of gases",
+          "topics": ["Molecular Nature of Matter", "Behaviour of Gases", "Kinetic Theory of an Ideal Gas", "Law of Equipartition of Energy", "Specific Heat Capacity", "Mean Free Path"],
+          "estimated_hours": 10,
+          "weightage": "medium"
+        },
+        {
+          "id": "phy-11-ch14",
+          "order": 14,
+          "name": "Oscillations",
+          "description": "Simple harmonic motion",
+          "topics": ["Periodic and Oscillatory Motions", "Simple Harmonic Motion", "Simple Harmonic Motion and Uniform Circular Motion", "Velocity and Acceleration in SHM", "Force Law for SHM", "Energy in SHM", "Some Systems Executing SHM", "Damped SHM", "Forced Oscillations and Resonance"],
+          "estimated_hours": 12,
+          "weightage": "high"
+        },
+        {
+          "id": "phy-11-ch15",
+          "order": 15,
+          "name": "Waves",
+          "description": "Mechanical waves and sound",
+          "topics": ["Transverse and Longitudinal Waves", "Displacement Relation in a Progressive Wave", "The Speed of a Travelling Wave", "Principle of Superposition of Waves", "Reflection of Waves", "Beats", "Doppler Effect"],
+          "estimated_hours": 12,
+          "weightage": "high"
+        }
+      ]
+    },
+    {
+      "id": "chemistry-11",
+      "name": "Chemistry",
+      "icon": "beaker",
+      "color": "#10B981",
+      "total_chapters": 14,
+      "chapters": [
+        {
+          "id": "chem-11-ch01",
+          "order": 1,
+          "name": "Some Basic Concepts of Chemistry",
+          "description": "Laws of chemical combinations and mole concept",
+          "topics": ["Importance of Chemistry", "Nature of Matter", "Properties of Matter", "Uncertainty in Measurement", "Laws of Chemical Combinations", "Dalton's Atomic Theory", "Atomic and Molecular Masses", "Mole Concept and Molar Masses", "Percentage Composition", "Stoichiometry and Stoichiometric Calculations"],
+          "estimated_hours": 12,
+          "weightage": "high"
+        },
+        {
+          "id": "chem-11-ch02",
+          "order": 2,
+          "name": "Structure of Atom",
+          "description": "Atomic models and quantum mechanical model",
+          "topics": ["Discovery of Electron, Proton and Neutron", "Atomic Models", "Developments Leading to Bohr's Model", "Bohr's Model for Hydrogen Atom", "Towards Quantum Mechanical Model", "Quantum Mechanical Model of Atom"],
+          "estimated_hours": 14,
+          "weightage": "high"
+        },
+        {
+          "id": "chem-11-ch03",
+          "order": 3,
+          "name": "Classification of Elements and Periodicity",
+          "description": "Periodic table and periodic properties",
+          "topics": ["Why do we Need to Classify Elements?", "Genesis of Periodic Classification", "Modern Periodic Law", "Nomenclature of Elements", "Electronic Configurations and Types of Elements", "Electronic Configurations and the Periodic Table", "Periodic Trends in Properties of Elements"],
+          "estimated_hours": 10,
+          "weightage": "high"
+        },
+        {
+          "id": "chem-11-ch04",
+          "order": 4,
+          "name": "Chemical Bonding and Molecular Structure",
+          "description": "Types of bonding and molecular geometry",
+          "topics": ["Kossel-Lewis Approach", "Ionic or Electrovalent Bond", "Bond Parameters", "The Valence Shell Electron Pair Repulsion Theory", "Valence Bond Theory", "Hybridisation", "Molecular Orbital Theory", "Bonding in Some Homonuclear Diatomic Molecules", "Hydrogen Bonding"],
+          "estimated_hours": 16,
+          "weightage": "high"
+        },
+        {
+          "id": "chem-11-ch05",
+          "order": 5,
+          "name": "States of Matter",
+          "description": "Gases and liquids",
+          "topics": ["Intermolecular Forces", "Thermal Energy", "The Gaseous State", "The Gas Laws", "Ideal Gas Equation", "Kinetic Energy and Molecular Speeds", "Kinetic Molecular Theory of Gases", "Behaviour of Real Gases", "Liquefaction of Gases", "Liquid State"],
+          "estimated_hours": 12,
+          "weightage": "high"
+        },
+        {
+          "id": "chem-11-ch06",
+          "order": 6,
+          "name": "Thermodynamics",
+          "description": "Laws of thermodynamics and thermochemistry",
+          "topics": ["Thermodynamic State", "Applications", "Measurement of Energy Changes", "Enthalpy Change", "Enthalpies for Different Types of Reactions", "Spontaneity", "Gibbs Energy Change and Equilibrium"],
+          "estimated_hours": 14,
+          "weightage": "high"
+        },
+        {
+          "id": "chem-11-ch07",
+          "order": 7,
+          "name": "Equilibrium",
+          "description": "Chemical and ionic equilibrium",
+          "topics": ["Equilibrium in Physical Processes", "Equilibrium in Chemical Processes", "Law of Chemical Equilibrium", "Homogeneous Equilibria", "Heterogeneous Equilibria", "Applications of Equilibrium Constants", "Relationship between Equilibrium Constant K, Reaction Quotient Q", "Factors Affecting Equilibria", "Ionic Equilibrium in Solution", "Acids, Bases and Salts", "Ionization of Acids and Bases", "Buffer Solutions", "Solubility Equilibria"],
+          "estimated_hours": 16,
+          "weightage": "high"
+        },
+        {
+          "id": "chem-11-ch08",
+          "order": 8,
+          "name": "Redox Reactions",
+          "description": "Oxidation-reduction reactions",
+          "topics": ["Classical Idea of Redox Reactions", "Redox Reactions in Terms of Electron Transfer", "Oxidation Number", "Redox Reactions and Electrode Processes"],
+          "estimated_hours": 8,
+          "weightage": "medium"
+        },
+        {
+          "id": "chem-11-ch09",
+          "order": 9,
+          "name": "Hydrogen",
+          "description": "Properties and compounds of hydrogen",
+          "topics": ["Position of Hydrogen in the Periodic Table", "Dihydrogen", "Preparation of Dihydrogen", "Properties of Dihydrogen", "Hydrides", "Water", "Hydrogen Peroxide", "Heavy Water", "Dihydrogen as a Fuel"],
+          "estimated_hours": 8,
+          "weightage": "medium"
+        },
+        {
+          "id": "chem-11-ch10",
+          "order": 10,
+          "name": "The s-Block Elements",
+          "description": "Alkali and alkaline earth metals",
+          "topics": ["Group 1 Elements: Alkali Metals", "General Characteristics of the Compounds of the Alkali Metals", "Anomalous Properties of Lithium", "Some Important Compounds of Sodium", "Biological Importance of Sodium and Potassium", "Group 2 Elements: Alkaline Earth Metals", "General Characteristics of Compounds of the Alkaline Earth Metals", "Anomalous Behaviour of Beryllium", "Some Important Compounds of Calcium", "Biological Importance of Magnesium and Calcium"],
+          "estimated_hours": 10,
+          "weightage": "medium"
+        },
+        {
+          "id": "chem-11-ch11",
+          "order": 11,
+          "name": "The p-Block Elements",
+          "description": "Group 13 and 14 elements",
+          "topics": ["Group 13 Elements: The Boron Family", "Important Trends and Anomalous Properties of Boron", "Some Important Compounds of Boron", "Uses of Boron and Aluminium", "Group 14 Elements: The Carbon Family", "Important Trends and Anomalous Behaviour of Carbon", "Allotropes of Carbon", "Some Important Compounds of Carbon and Silicon"],
+          "estimated_hours": 14,
+          "weightage": "high"
+        },
+        {
+          "id": "chem-11-ch12",
+          "order": 12,
+          "name": "Organic Chemistry - Some Basic Principles",
+          "description": "Introduction to organic chemistry",
+          "topics": ["General Introduction", "Tetravalence of Carbon", "Structural Representations of Organic Compounds", "Classification of Organic Compounds", "Nomenclature of Organic Compounds", "Isomerism", "Fundamental Concepts in Organic Reaction Mechanism", "Methods of Purification of Organic Compounds", "Qualitative Analysis of Organic Compounds", "Quantitative Analysis"],
+          "estimated_hours": 16,
+          "weightage": "high"
+        },
+        {
+          "id": "chem-11-ch13",
+          "order": 13,
+          "name": "Hydrocarbons",
+          "description": "Alkanes, alkenes, alkynes, and aromatic hydrocarbons",
+          "topics": ["Classification", "Alkanes", "Alkenes", "Alkynes", "Aromatic Hydrocarbons", "Carcinogenicity and Toxicity"],
+          "estimated_hours": 14,
+          "weightage": "high"
+        },
+        {
+          "id": "chem-11-ch14",
+          "order": 14,
+          "name": "Environmental Chemistry",
+          "description": "Environmental pollution and its control",
+          "topics": ["Environmental Pollution", "Atmospheric Pollution", "Water Pollution", "Soil Pollution", "Industrial Waste", "Strategies to Control Environmental Pollution", "Green Chemistry"],
+          "estimated_hours": 6,
+          "weightage": "low"
+        }
+      ]
+    },
+    {
+      "id": "mathematics-11",
+      "name": "Mathematics",
+      "icon": "calculator",
+      "color": "#F59E0B",
+      "total_chapters": 16,
+      "chapters": [
+        {
+          "id": "math-11-ch01",
+          "order": 1,
+          "name": "Sets",
+          "description": "Set theory fundamentals",
+          "topics": ["Sets and their Representations", "The Empty Set", "Finite and Infinite Sets", "Equal Sets", "Subsets", "Power Set", "Universal Set", "Venn Diagrams", "Operations on Sets", "Complement of a Set"],
+          "estimated_hours": 10,
+          "weightage": "medium"
+        },
+        {
+          "id": "math-11-ch02",
+          "order": 2,
+          "name": "Relations and Functions",
+          "description": "Relations, functions, and their graphs",
+          "topics": ["Cartesian Product of Sets", "Relations", "Functions"],
+          "estimated_hours": 12,
+          "weightage": "high"
+        },
+        {
+          "id": "math-11-ch03",
+          "order": 3,
+          "name": "Trigonometric Functions",
+          "description": "Trigonometric ratios, identities, and equations",
+          "topics": ["Angles", "Trigonometric Functions", "Trigonometric Functions of Sum and Difference of Two Angles", "Trigonometric Equations"],
+          "estimated_hours": 16,
+          "weightage": "high"
+        },
+        {
+          "id": "math-11-ch04",
+          "order": 4,
+          "name": "Principle of Mathematical Induction",
+          "description": "Proof by mathematical induction",
+          "topics": ["Motivation", "The Principle of Mathematical Induction"],
+          "estimated_hours": 8,
+          "weightage": "medium"
+        },
+        {
+          "id": "math-11-ch05",
+          "order": 5,
+          "name": "Complex Numbers and Quadratic Equations",
+          "description": "Complex numbers and solving quadratic equations",
+          "topics": ["Complex Numbers", "Algebra of Complex Numbers", "The Modulus and the Conjugate of a Complex Number", "Argand Plane and Polar Representation", "Quadratic Equations"],
+          "estimated_hours": 10,
+          "weightage": "high"
+        },
+        {
+          "id": "math-11-ch06",
+          "order": 6,
+          "name": "Linear Inequalities",
+          "description": "Linear inequalities in one and two variables",
+          "topics": ["Inequalities", "Algebraic Solutions of Linear Inequalities", "Graphical Solution of Linear Inequalities", "Solution of System of Linear Inequalities"],
+          "estimated_hours": 8,
+          "weightage": "medium"
+        },
+        {
+          "id": "math-11-ch07",
+          "order": 7,
+          "name": "Permutations and Combinations",
+          "description": "Counting principles",
+          "topics": ["Fundamental Principle of Counting", "Permutations", "Permutations when all Objects are not Distinct", "Combinations"],
+          "estimated_hours": 12,
+          "weightage": "high"
+        },
+        {
+          "id": "math-11-ch08",
+          "order": 8,
+          "name": "Binomial Theorem",
+          "description": "Binomial expansion and applications",
+          "topics": ["Binomial Theorem for Positive Integral Indices", "General and Middle Terms"],
+          "estimated_hours": 8,
+          "weightage": "high"
+        },
+        {
+          "id": "math-11-ch09",
+          "order": 9,
+          "name": "Sequences and Series",
+          "description": "AP, GP, and special series",
+          "topics": ["Sequences", "Series", "Arithmetic Progression", "Geometric Progression", "Relationship between AM and GM", "Sum to n Terms of Special Series"],
+          "estimated_hours": 12,
+          "weightage": "high"
+        },
+        {
+          "id": "math-11-ch10",
+          "order": 10,
+          "name": "Straight Lines",
+          "description": "Coordinate geometry of straight lines",
+          "topics": ["Slope of a Line", "Various Forms of the Equation of a Line", "General Equation of a Line", "Distance of a Point from a Line"],
+          "estimated_hours": 12,
+          "weightage": "high"
+        },
+        {
+          "id": "math-11-ch11",
+          "order": 11,
+          "name": "Conic Sections",
+          "description": "Circle, parabola, ellipse, and hyperbola",
+          "topics": ["Sections of a Cone", "Circle", "Parabola", "Ellipse", "Hyperbola"],
+          "estimated_hours": 14,
+          "weightage": "high"
+        },
+        {
+          "id": "math-11-ch12",
+          "order": 12,
+          "name": "Introduction to Three Dimensional Geometry",
+          "description": "Coordinate geometry in 3D",
+          "topics": ["Coordinate Axes and Coordinate Planes", "Coordinates of a Point in Space", "Distance between Two Points", "Section Formula"],
+          "estimated_hours": 8,
+          "weightage": "medium"
+        },
+        {
+          "id": "math-11-ch13",
+          "order": 13,
+          "name": "Limits and Derivatives",
+          "description": "Introduction to calculus",
+          "topics": ["Intuitive Idea of Derivatives", "Limits", "Limits of Trigonometric Functions", "Derivatives"],
+          "estimated_hours": 14,
+          "weightage": "high"
+        },
+        {
+          "id": "math-11-ch14",
+          "order": 14,
+          "name": "Mathematical Reasoning",
+          "description": "Logic and reasoning",
+          "topics": ["Statements", "New Statements from Old", "Special Words/Phrases", "Implications", "Validating Statements"],
+          "estimated_hours": 6,
+          "weightage": "low"
+        },
+        {
+          "id": "math-11-ch15",
+          "order": 15,
+          "name": "Statistics",
+          "description": "Measures of dispersion",
+          "topics": ["Measures of Dispersion", "Range", "Mean Deviation", "Variance and Standard Deviation", "Analysis of Frequency Distributions"],
+          "estimated_hours": 10,
+          "weightage": "medium"
+        },
+        {
+          "id": "math-11-ch16",
+          "order": 16,
+          "name": "Probability",
+          "description": "Random experiments and probability",
+          "topics": ["Random Experiments", "Event", "Axiomatic Approach to Probability"],
+          "estimated_hours": 10,
+          "weightage": "high"
+        }
+      ]
+    },
+    {
+      "id": "biology-11",
+      "name": "Biology",
+      "icon": "dna",
+      "color": "#EC4899",
+      "total_chapters": 22,
+      "chapters": [
+        {
+          "id": "bio-11-ch01",
+          "order": 1,
+          "name": "The Living World",
+          "description": "Characteristics of living organisms and taxonomy",
+          "topics": ["What is Living?", "Diversity in the Living World", "Taxonomic Categories", "Taxonomical Aids"],
+          "estimated_hours": 6,
+          "weightage": "medium"
+        },
+        {
+          "id": "bio-11-ch02",
+          "order": 2,
+          "name": "Biological Classification",
+          "description": "Five kingdom classification",
+          "topics": ["Kingdom Monera", "Kingdom Protista", "Kingdom Fungi", "Kingdom Plantae", "Kingdom Animalia", "Viruses, Viroids and Lichens"],
+          "estimated_hours": 10,
+          "weightage": "high"
+        },
+        {
+          "id": "bio-11-ch03",
+          "order": 3,
+          "name": "Plant Kingdom",
+          "description": "Classification of plants",
+          "topics": ["Algae", "Bryophytes", "Pteridophytes", "Gymnosperms", "Angiosperms", "Plant Life Cycles and Alternation of Generations"],
+          "estimated_hours": 10,
+          "weightage": "high"
+        },
+        {
+          "id": "bio-11-ch04",
+          "order": 4,
+          "name": "Animal Kingdom",
+          "description": "Classification of animals",
+          "topics": ["Basis of Classification", "Classification of Animals"],
+          "estimated_hours": 12,
+          "weightage": "high"
+        },
+        {
+          "id": "bio-11-ch05",
+          "order": 5,
+          "name": "Morphology of Flowering Plants",
+          "description": "Structure of flowering plants",
+          "topics": ["The Root", "The Stem", "The Leaf", "The Inflorescence", "The Flower", "The Fruit", "The Seed", "Description of Some Important Families"],
+          "estimated_hours": 12,
+          "weightage": "high"
+        },
+        {
+          "id": "bio-11-ch06",
+          "order": 6,
+          "name": "Anatomy of Flowering Plants",
+          "description": "Internal structure of plants",
+          "topics": ["The Tissues", "The Tissue System", "Anatomy of Dicotyledonous and Monocotyledonous Plants", "Secondary Growth"],
+          "estimated_hours": 10,
+          "weightage": "high"
+        },
+        {
+          "id": "bio-11-ch07",
+          "order": 7,
+          "name": "Structural Organisation in Animals",
+          "description": "Animal tissues and organ systems",
+          "topics": ["Animal Tissues", "Organ and Organ System", "Earthworm", "Cockroach", "Frog"],
+          "estimated_hours": 10,
+          "weightage": "medium"
+        },
+        {
+          "id": "bio-11-ch08",
+          "order": 8,
+          "name": "Cell: The Unit of Life",
+          "description": "Cell structure and organelles",
+          "topics": ["What is a Cell?", "Cell Theory", "An Overview of Cell", "Prokaryotic Cells", "Eukaryotic Cells"],
+          "estimated_hours": 12,
+          "weightage": "high"
+        },
+        {
+          "id": "bio-11-ch09",
+          "order": 9,
+          "name": "Biomolecules",
+          "description": "Biological macromolecules",
+          "topics": ["How to Analyse Chemical Composition?", "Primary and Secondary Metabolites", "Biomacromolecules", "Proteins", "Polysaccharides", "Nucleic Acids", "Structure of Proteins", "Nature of Bond Linking Monomers", "Dynamic State of Body Constituents", "Metabolic Basis for Living", "The Living State", "Enzymes"],
+          "estimated_hours": 14,
+          "weightage": "high"
+        },
+        {
+          "id": "bio-11-ch10",
+          "order": 10,
+          "name": "Cell Cycle and Cell Division",
+          "description": "Mitosis and meiosis",
+          "topics": ["Cell Cycle", "M Phase", "Significance of Mitosis", "Meiosis", "Significance of Meiosis"],
+          "estimated_hours": 10,
+          "weightage": "high"
+        },
+        {
+          "id": "bio-11-ch11",
+          "order": 11,
+          "name": "Transport in Plants",
+          "description": "Water and mineral transport in plants",
+          "topics": ["Means of Transport", "Plant-Water Relations", "Long Distance Transport of Water", "Transpiration", "Uptake and Transport of Mineral Nutrients", "Phloem Transport: Flow from Source to Sink"],
+          "estimated_hours": 10,
+          "weightage": "high"
+        },
+        {
+          "id": "bio-11-ch12",
+          "order": 12,
+          "name": "Mineral Nutrition",
+          "description": "Essential minerals and nitrogen metabolism",
+          "topics": ["Methods to Study Mineral Requirements", "Essential Mineral Elements", "Mechanism of Absorption of Elements", "Translocation of Solutes", "Soil as Reservoir of Essential Elements", "Metabolism of Nitrogen"],
+          "estimated_hours": 8,
+          "weightage": "medium"
+        },
+        {
+          "id": "bio-11-ch13",
+          "order": 13,
+          "name": "Photosynthesis in Higher Plants",
+          "description": "Light and dark reactions of photosynthesis",
+          "topics": ["What Do We Know?", "Early Experiments", "Where Does Photosynthesis Take Place?", "How Many Types of Pigments are Involved?", "What is Light Reaction?", "The Electron Transport", "Where are the ATP and NADPH Used?", "The C4 Pathway", "Photorespiration", "Factors Affecting Photosynthesis"],
+          "estimated_hours": 14,
+          "weightage": "high"
+        },
+        {
+          "id": "bio-11-ch14",
+          "order": 14,
+          "name": "Respiration in Plants",
+          "description": "Cellular respiration",
+          "topics": ["Do Plants Breathe?", "Glycolysis", "Fermentation", "Aerobic Respiration", "The Respiratory Balance Sheet", "Amphibolic Pathway", "Respiratory Quotient"],
+          "estimated_hours": 10,
+          "weightage": "high"
+        },
+        {
+          "id": "bio-11-ch15",
+          "order": 15,
+          "name": "Plant Growth and Development",
+          "description": "Growth regulators and photoperiodism",
+          "topics": ["Growth", "Differentiation, Dedifferentiation and Redifferentiation", "Development", "Plant Growth Regulators", "Photoperiodism", "Vernalisation"],
+          "estimated_hours": 8,
+          "weightage": "medium"
+        },
+        {
+          "id": "bio-11-ch16",
+          "order": 16,
+          "name": "Digestion and Absorption",
+          "description": "Human digestive system",
+          "topics": ["Digestive System", "Digestion of Food", "Absorption of Digested Products", "Disorders of Digestive System"],
+          "estimated_hours": 10,
+          "weightage": "high"
+        },
+        {
+          "id": "bio-11-ch17",
+          "order": 17,
+          "name": "Breathing and Exchange of Gases",
+          "description": "Respiratory system and gas exchange",
+          "topics": ["Respiratory Organs", "Mechanism of Breathing", "Exchange of Gases", "Transport of Gases", "Regulation of Respiration", "Disorders of Respiratory System"],
+          "estimated_hours": 10,
+          "weightage": "high"
+        },
+        {
+          "id": "bio-11-ch18",
+          "order": 18,
+          "name": "Body Fluids and Circulation",
+          "description": "Blood, lymph, and circulatory system",
+          "topics": ["Blood", "Lymph", "Circulatory Pathways", "Double Circulation", "Regulation of Cardiac Activity", "Disorders of Circulatory System"],
+          "estimated_hours": 12,
+          "weightage": "high"
+        },
+        {
+          "id": "bio-11-ch19",
+          "order": 19,
+          "name": "Excretory Products and their Elimination",
+          "description": "Excretion in humans",
+          "topics": ["Human Excretory System", "Urine Formation", "Function of the Tubules", "Mechanism of Concentration of the Filtrate", "Regulation of Kidney Function", "Micturition", "Role of Other Organs in Excretion", "Disorders of the Excretory System"],
+          "estimated_hours": 10,
+          "weightage": "high"
+        },
+        {
+          "id": "bio-11-ch20",
+          "order": 20,
+          "name": "Locomotion and Movement",
+          "description": "Skeletal and muscular system",
+          "topics": ["Types of Movement", "Muscle", "Skeletal System", "Joints", "Disorders of Muscular and Skeletal System"],
+          "estimated_hours": 10,
+          "weightage": "medium"
+        },
+        {
+          "id": "bio-11-ch21",
+          "order": 21,
+          "name": "Neural Control and Coordination",
+          "description": "Nervous system",
+          "topics": ["Neural System", "Human Neural System", "Neuron as Structural and Functional Unit", "Central Neural System", "Reflex Action and Reflex Arc", "Sensory Reception and Processing"],
+          "estimated_hours": 12,
+          "weightage": "high"
+        },
+        {
+          "id": "bio-11-ch22",
+          "order": 22,
+          "name": "Chemical Coordination and Integration",
+          "description": "Endocrine system",
+          "topics": ["Endocrine Glands and Hormones", "Human Endocrine System", "Hormones of Heart, Kidney and Gastrointestinal Tract", "Mechanism of Hormone Action"],
+          "estimated_hours": 10,
+          "weightage": "high"
+        }
+      ]
+    },
+    {
+      "id": "english-11",
+      "name": "English",
+      "icon": "book-open",
+      "color": "#8B5CF6",
+      "total_chapters": 16,
+      "chapters": [
+        {
+          "id": "eng-11-hornbill-ch01",
+          "order": 1,
+          "name": "The Portrait of a Lady",
+          "description": "Khushwant Singh's memoir about his grandmother",
+          "topics": ["Reading Comprehension", "Character Analysis", "Relationships"],
+          "estimated_hours": 5,
+          "weightage": "high"
+        },
+        {
+          "id": "eng-11-hornbill-ch02",
+          "order": 2,
+          "name": "We're Not Afraid to Die",
+          "description": "A survival story at sea",
+          "topics": ["Adventure", "Courage", "Family Bonds"],
+          "estimated_hours": 5,
+          "weightage": "high"
+        },
+        {
+          "id": "eng-11-hornbill-ch03",
+          "order": 3,
+          "name": "Discovering Tut: the Saga Continues",
+          "description": "The mystery of King Tutankhamun",
+          "topics": ["History", "Archaeology", "Mystery"],
+          "estimated_hours": 5,
+          "weightage": "medium"
+        },
+        {
+          "id": "eng-11-hornbill-ch04",
+          "order": 4,
+          "name": "Landscape of the Soul",
+          "description": "Art in different cultures",
+          "topics": ["Art Appreciation", "Culture", "Philosophy"],
+          "estimated_hours": 5,
+          "weightage": "medium"
+        },
+        {
+          "id": "eng-11-hornbill-ch05",
+          "order": 5,
+          "name": "The Ailing Planet",
+          "description": "Environmental concerns",
+          "topics": ["Environment", "Conservation", "Global Issues"],
+          "estimated_hours": 5,
+          "weightage": "high"
+        },
+        {
+          "id": "eng-11-hornbill-ch06",
+          "order": 6,
+          "name": "The Browning Version",
+          "description": "A one-act play by Terence Rattigan",
+          "topics": ["Drama", "Character Study", "Teaching"],
+          "estimated_hours": 5,
+          "weightage": "medium"
+        },
+        {
+          "id": "eng-11-hornbill-ch07",
+          "order": 7,
+          "name": "The Adventure",
+          "description": "A story about parallel worlds",
+          "topics": ["Science Fiction", "History", "Alternate Reality"],
+          "estimated_hours": 5,
+          "weightage": "medium"
+        },
+        {
+          "id": "eng-11-hornbill-ch08",
+          "order": 8,
+          "name": "Silk Road",
+          "description": "A travelogue about the historic trade route",
+          "topics": ["Travel Writing", "History", "Culture"],
+          "estimated_hours": 5,
+          "weightage": "medium"
+        },
+        {
+          "id": "eng-11-poem-ch01",
+          "order": 9,
+          "name": "A Photograph",
+          "description": "Shirley Toulson's poem about memories",
+          "topics": ["Poetry Analysis", "Memory", "Loss"],
+          "estimated_hours": 3,
+          "weightage": "high"
+        },
+        {
+          "id": "eng-11-poem-ch02",
+          "order": 10,
+          "name": "The Laburnum Top",
+          "description": "Ted Hughes' nature poem",
+          "topics": ["Poetry Analysis", "Nature", "Imagery"],
+          "estimated_hours": 3,
+          "weightage": "medium"
+        },
+        {
+          "id": "eng-11-poem-ch03",
+          "order": 11,
+          "name": "The Voice of the Rain",
+          "description": "Walt Whitman's poem",
+          "topics": ["Poetry Analysis", "Nature", "Cycle of Life"],
+          "estimated_hours": 3,
+          "weightage": "medium"
+        },
+        {
+          "id": "eng-11-poem-ch04",
+          "order": 12,
+          "name": "Childhood",
+          "description": "Markus Natten's reflective poem",
+          "topics": ["Poetry Analysis", "Growing Up", "Self-discovery"],
+          "estimated_hours": 3,
+          "weightage": "medium"
+        },
+        {
+          "id": "eng-11-poem-ch05",
+          "order": 13,
+          "name": "Father to Son",
+          "description": "Elizabeth Jennings' poem on relationships",
+          "topics": ["Poetry Analysis", "Family", "Communication Gap"],
+          "estimated_hours": 3,
+          "weightage": "medium"
+        },
+        {
+          "id": "eng-11-snapshots-ch01",
+          "order": 14,
+          "name": "The Summer of the Beautiful White Horse",
+          "description": "William Saroyan's story",
+          "topics": ["Childhood", "Values", "Family Honor"],
+          "estimated_hours": 4,
+          "weightage": "medium"
+        },
+        {
+          "id": "eng-11-snapshots-ch02",
+          "order": 15,
+          "name": "The Address",
+          "description": "Marga Minco's story about war and memory",
+          "topics": ["War", "Memory", "Loss"],
+          "estimated_hours": 4,
+          "weightage": "medium"
+        },
+        {
+          "id": "eng-11-grammar",
+          "order": 16,
+          "name": "Grammar and Writing Skills",
+          "description": "Advanced grammar and writing",
+          "topics": ["Tenses", "Voice Change", "Transformation", "Note Making", "Summary Writing", "Article Writing", "Report Writing", "Letter Writing"],
+          "estimated_hours": 18,
+          "weightage": "high"
+        }
+      ]
+    }
+  ]
+}

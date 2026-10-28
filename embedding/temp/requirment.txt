@@ -1,0 +1,64 @@
+# ============================
+# LangChain Core
+# ============================
+langchain>=0.1.0
+langchain-core>=0.0.199
+
+# ============================
+# LangGraph (Workflow / Orchestration)
+# ============================
+langgraph>=0.1.0
+
+# ============================
+# Google Gemini (PaLM) Integration
+# ============================
+langchain-google-genai>=0.0.1
+google-generativeai>=0.2.0
+
+# ============================
+# Hugging Face Integration
+# ============================
+langchain-huggingface>=0.0.7
+transformers>=4.35.0
+huggingface-hub>=0.16.4
+
+# ============================
+# Vector DB (Weaviate)
+# ============================
+weaviate-client>=4.13.0
+chromadb>=0.4.0   # Optional local fallback
+
+# ============================
+# Document Loaders & Utilities
+# ============================
+python-magic  # for detecting file types
+python-docx
+PyPDF2
+pdfplumber
+requests
+beautifulsoup4
+lxml
+
+# ============================
+# Environment Management
+# ============================
+python-dotenv>=1.0.0
+
+# ============================
+# ML / Numerical Utilities
+# ============================
+numpy>=1.25.0
+scikit-learn>=1.3.0
+pandas>=2.1.0
+
+# ============================
+# Async / HTTP Clients
+# ============================
+httpx>=0.24.0
+aiohttp>=3.9.0
+
+# ============================
+# Others (optional, helpful for streaming / monitoring)
+# ============================
+tqdm>=4.65.0
+rich>=13.6.0

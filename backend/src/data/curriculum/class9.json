@@ -1,0 +1,852 @@
+{
+  "class": 9,
+  "board": "CBSE",
+  "subjects": [
+    {
+      "id": "mathematics-9",
+      "name": "Mathematics",
+      "icon": "calculator",
+      "color": "#3B82F6",
+      "total_chapters": 15,
+      "chapters": [
+        {
+          "id": "math-9-ch01",
+          "order": 1,
+          "name": "Number Systems",
+          "description": "Real numbers, irrational numbers, and their decimal expansions",
+          "topics": ["Irrational Numbers", "Real Numbers and their Decimal Expansions", "Operations on Real Numbers", "Laws of Exponents for Real Numbers"],
+          "estimated_hours": 10,
+          "weightage": "high"
+        },
+        {
+          "id": "math-9-ch02",
+          "order": 2,
+          "name": "Polynomials",
+          "description": "Polynomials in one variable, zeros, and factorization",
+          "topics": ["Polynomials in One Variable", "Zeros of a Polynomial", "Remainder Theorem", "Factorisation of Polynomials", "Algebraic Identities"],
+          "estimated_hours": 12,
+          "weightage": "high"
+        },
+        {
+          "id": "math-9-ch03",
+          "order": 3,
+          "name": "Coordinate Geometry",
+          "description": "Cartesian system and plotting points",
+          "topics": ["Cartesian System", "Plotting a Point in the Plane"],
+          "estimated_hours": 6,
+          "weightage": "medium"
+        },
+        {
+          "id": "math-9-ch04",
+          "order": 4,
+          "name": "Linear Equations in Two Variables",
+          "description": "Linear equations and their graphical representation",
+          "topics": ["Linear Equations", "Solution of a Linear Equation", "Graph of a Linear Equation in Two Variables", "Equations of Lines Parallel to x-axis and y-axis"],
+          "estimated_hours": 10,
+          "weightage": "high"
+        },
+        {
+          "id": "math-9-ch05",
+          "order": 5,
+          "name": "Introduction to Euclid's Geometry",
+          "description": "Euclid's definitions, axioms and postulates",
+          "topics": ["Euclid's Definitions", "Euclid's Axioms", "Euclid's Postulates"],
+          "estimated_hours": 4,
+          "weightage": "low"
+        },
+        {
+          "id": "math-9-ch06",
+          "order": 6,
+          "name": "Lines and Angles",
+          "description": "Basic terms, intersecting and parallel lines",
+          "topics": ["Basic Terms and Definitions", "Intersecting Lines and Non-intersecting Lines", "Pairs of Angles", "Parallel Lines and a Transversal", "Angle Sum Property of a Triangle"],
+          "estimated_hours": 8,
+          "weightage": "high"
+        },
+        {
+          "id": "math-9-ch07",
+          "order": 7,
+          "name": "Triangles",
+          "description": "Congruence of triangles and inequalities",
+          "topics": ["Congruence of Triangles", "Criteria for Congruence of Triangles", "Properties of a Triangle", "Inequalities in a Triangle"],
+          "estimated_hours": 12,
+          "weightage": "high"
+        },
+        {
+          "id": "math-9-ch08",
+          "order": 8,
+          "name": "Quadrilaterals",
+          "description": "Properties of parallelograms and mid-point theorem",
+          "topics": ["Angle Sum Property of a Quadrilateral", "Types of Quadrilaterals", "Properties of a Parallelogram", "Mid-point Theorem"],
+          "estimated_hours": 10,
+          "weightage": "high"
+        },
+        {
+          "id": "math-9-ch09",
+          "order": 9,
+          "name": "Areas of Parallelograms and Triangles",
+          "description": "Figures on the same base and between parallels",
+          "topics": ["Figures on the Same Base and Between the Same Parallels", "Parallelograms on the Same Base", "Triangles on the Same Base"],
+          "estimated_hours": 8,
+          "weightage": "medium"
+        },
+        {
+          "id": "math-9-ch10",
+          "order": 10,
+          "name": "Circles",
+          "description": "Circles, chords, arcs and cyclic quadrilaterals",
+          "topics": ["Circles and Its Related Terms", "Angle Subtended by a Chord at a Point", "Perpendicular from the Centre to a Chord", "Circle through Three Points", "Cyclic Quadrilaterals"],
+          "estimated_hours": 12,
+          "weightage": "high"
+        },
+        {
+          "id": "math-9-ch11",
+          "order": 11,
+          "name": "Constructions",
+          "description": "Basic constructions and constructions of triangles",
+          "topics": ["Basic Constructions", "Some Constructions of Triangles"],
+          "estimated_hours": 6,
+          "weightage": "medium"
+        },
+        {
+          "id": "math-9-ch12",
+          "order": 12,
+          "name": "Heron's Formula",
+          "description": "Area of triangle using Heron's formula",
+          "topics": ["Area of a Triangle - by Heron's Formula", "Application of Heron's Formula"],
+          "estimated_hours": 6,
+          "weightage": "medium"
+        },
+        {
+          "id": "math-9-ch13",
+          "order": 13,
+          "name": "Surface Areas and Volumes",
+          "description": "Surface areas and volumes of 3D shapes",
+          "topics": ["Surface Area of a Cuboid and a Cube", "Surface Area of a Right Circular Cylinder", "Surface Area of a Right Circular Cone", "Surface Area of a Sphere", "Volume of a Cuboid", "Volume of a Cylinder", "Volume of a Right Circular Cone", "Volume of a Sphere"],
+          "estimated_hours": 14,
+          "weightage": "high"
+        },
+        {
+          "id": "math-9-ch14",
+          "order": 14,
+          "name": "Statistics",
+          "description": "Collection and presentation of data, measures of central tendency",
+          "topics": ["Collection of Data", "Presentation of Data", "Graphical Representation of Data", "Measures of Central Tendency"],
+          "estimated_hours": 10,
+          "weightage": "high"
+        },
+        {
+          "id": "math-9-ch15",
+          "order": 15,
+          "name": "Probability",
+          "description": "Probability - an experimental approach",
+          "topics": ["Probability - An Experimental Approach"],
+          "estimated_hours": 6,
+          "weightage": "medium"
+        }
+      ]
+    },
+    {
+      "id": "science-9",
+      "name": "Science",
+      "icon": "flask",
+      "color": "#10B981",
+      "total_chapters": 15,
+      "chapters": [
+        {
+          "id": "sci-9-ch01",
+          "order": 1,
+          "name": "Matter in Our Surroundings",
+          "description": "Physical nature of matter and its states",
+          "topics": ["Physical Nature of Matter", "Characteristics of Particles of Matter", "States of Matter", "Can Matter Change its State?", "Evaporation"],
+          "estimated_hours": 8,
+          "weightage": "high"
+        },
+        {
+          "id": "sci-9-ch02",
+          "order": 2,
+          "name": "Is Matter Around Us Pure",
+          "description": "Mixtures, solutions, and separation techniques",
+          "topics": ["What is a Mixture?", "What is a Solution?", "Separating the Components of a Mixture", "Physical and Chemical Changes", "Types of Pure Substances"],
+          "estimated_hours": 10,
+          "weightage": "high"
+        },
+        {
+          "id": "sci-9-ch03",
+          "order": 3,
+          "name": "Atoms and Molecules",
+          "description": "Laws of chemical combination, atoms, and molecules",
+          "topics": ["Laws of Chemical Combination", "What is an Atom?", "What is a Molecule?", "Writing Chemical Formulae", "Molecular Mass and Mole Concept"],
+          "estimated_hours": 12,
+          "weightage": "high"
+        },
+        {
+          "id": "sci-9-ch04",
+          "order": 4,
+          "name": "Structure of the Atom",
+          "description": "Atomic models and electronic configuration",
+          "topics": ["Charged Particles in Matter", "The Structure of an Atom", "How are Electrons Distributed?", "Valency", "Atomic Number and Mass Number", "Isotopes"],
+          "estimated_hours": 10,
+          "weightage": "high"
+        },
+        {
+          "id": "sci-9-ch05",
+          "order": 5,
+          "name": "The Fundamental Unit of Life",
+          "description": "Cell structure and functions",
+          "topics": ["What are Living Organisms Made Up of?", "What is a Cell Made Up of?", "Plasma Membrane", "Cell Wall", "Nucleus", "Cytoplasm", "Cell Organelles"],
+          "estimated_hours": 10,
+          "weightage": "high"
+        },
+        {
+          "id": "sci-9-ch06",
+          "order": 6,
+          "name": "Tissues",
+          "description": "Plant and animal tissues",
+          "topics": ["Are Plants and Animals Made of Same Types of Tissues?", "Plant Tissues", "Animal Tissues"],
+          "estimated_hours": 10,
+          "weightage": "high"
+        },
+        {
+          "id": "sci-9-ch07",
+          "order": 7,
+          "name": "Diversity in Living Organisms",
+          "description": "Classification of living organisms",
+          "topics": ["What is the Basis of Classification?", "Classification and Evolution", "The Hierarchy of Classification Groups", "Plantae", "Animalia"],
+          "estimated_hours": 10,
+          "weightage": "medium"
+        },
+        {
+          "id": "sci-9-ch08",
+          "order": 8,
+          "name": "Motion",
+          "description": "Describing motion, velocity, and graphical representation",
+          "topics": ["Describing Motion", "Measuring the Rate of Motion", "Rate of Change of Velocity", "Graphical Representation of Motion", "Equations of Motion", "Uniform Circular Motion"],
+          "estimated_hours": 12,
+          "weightage": "high"
+        },
+        {
+          "id": "sci-9-ch09",
+          "order": 9,
+          "name": "Force and Laws of Motion",
+          "description": "Newton's laws of motion",
+          "topics": ["Balanced and Unbalanced Forces", "First Law of Motion", "Inertia and Mass", "Second Law of Motion", "Third Law of Motion", "Conservation of Momentum"],
+          "estimated_hours": 12,
+          "weightage": "high"
+        },
+        {
+          "id": "sci-9-ch10",
+          "order": 10,
+          "name": "Gravitation",
+          "description": "Universal law of gravitation and its applications",
+          "topics": ["Gravitation", "Free Fall", "Mass", "Weight", "Thrust and Pressure", "Archimedes' Principle", "Relative Density"],
+          "estimated_hours": 10,
+          "weightage": "high"
+        },
+        {
+          "id": "sci-9-ch11",
+          "order": 11,
+          "name": "Work and Energy",
+          "description": "Work, energy, and power",
+          "topics": ["Work", "Energy", "Rate of Doing Work"],
+          "estimated_hours": 10,
+          "weightage": "high"
+        },
+        {
+          "id": "sci-9-ch12",
+          "order": 12,
+          "name": "Sound",
+          "description": "Production and propagation of sound",
+          "topics": ["Production of Sound", "Propagation of Sound", "Reflection of Sound", "Range of Hearing", "Applications of Ultrasound", "Structure of Human Ear"],
+          "estimated_hours": 10,
+          "weightage": "high"
+        },
+        {
+          "id": "sci-9-ch13",
+          "order": 13,
+          "name": "Why Do We Fall Ill",
+          "description": "Health, diseases, and their prevention",
+          "topics": ["Health and its Failure", "Disease and its Causes", "Infectious Diseases", "Principles of Treatment", "Principles of Prevention"],
+          "estimated_hours": 8,
+          "weightage": "medium"
+        },
+        {
+          "id": "sci-9-ch14",
+          "order": 14,
+          "name": "Natural Resources",
+          "description": "Air, water, soil, and biogeochemical cycles",
+          "topics": ["The Breath of Life: Air", "Water: A Wonder Liquid", "Mineral Riches in the Soil", "Biogeochemical Cycles"],
+          "estimated_hours": 8,
+          "weightage": "medium"
+        },
+        {
+          "id": "sci-9-ch15",
+          "order": 15,
+          "name": "Improvement in Food Resources",
+          "description": "Improvement in crop yields and animal husbandry",
+          "topics": ["Improvement in Crop Yields", "Animal Husbandry"],
+          "estimated_hours": 6,
+          "weightage": "low"
+        }
+      ]
+    },
+    {
+      "id": "social-science-9",
+      "name": "Social Science",
+      "icon": "globe",
+      "color": "#F59E0B",
+      "total_chapters": 22,
+      "chapters": [
+        {
+          "id": "sst-9-hist-ch01",
+          "order": 1,
+          "name": "The French Revolution",
+          "description": "Events and impact of the French Revolution",
+          "topics": ["French Society During the Late Eighteenth Century", "The Outbreak of the Revolution", "France Abolishes Monarchy", "The Reign of Terror", "A Directory Rules France", "Women and the Revolution", "The Abolition of Slavery"],
+          "estimated_hours": 8,
+          "weightage": "high"
+        },
+        {
+          "id": "sst-9-hist-ch02",
+          "order": 2,
+          "name": "Socialism in Europe and the Russian Revolution",
+          "description": "The Russian Revolution and its global impact",
+          "topics": ["The Age of Social Change", "The Russian Revolution", "What Were the Social, Economic and Political Conditions?", "The February Revolution", "The October Revolution", "Global Influence of the Russian Revolution"],
+          "estimated_hours": 8,
+          "weightage": "high"
+        },
+        {
+          "id": "sst-9-hist-ch03",
+          "order": 3,
+          "name": "Nazism and the Rise of Hitler",
+          "description": "Hitler's rise to power and Nazi Germany",
+          "topics": ["Birth of the Weimar Republic", "Hitler's Rise to Power", "The Nazi Worldview", "Youth in Nazi Germany", "Ordinary People and the Crimes Against Humanity"],
+          "estimated_hours": 8,
+          "weightage": "high"
+        },
+        {
+          "id": "sst-9-hist-ch04",
+          "order": 4,
+          "name": "Forest Society and Colonialism",
+          "description": "Impact of colonialism on forests and forest dwellers",
+          "topics": ["Why Deforestation?", "The Rise of Commercial Forestry", "Rebellion in the Forest", "Forest Transformations in Java"],
+          "estimated_hours": 6,
+          "weightage": "medium"
+        },
+        {
+          "id": "sst-9-hist-ch05",
+          "order": 5,
+          "name": "Pastoralists in the Modern World",
+          "description": "Life of pastoral communities",
+          "topics": ["Pastoral Nomads and their Movements", "Colonial Rule and Pastoral Life", "Pastoralism in Africa"],
+          "estimated_hours": 6,
+          "weightage": "medium"
+        },
+        {
+          "id": "sst-9-geo-ch01",
+          "order": 6,
+          "name": "India - Size and Location",
+          "description": "India's geographical position and significance",
+          "topics": ["Location", "Size", "India and the World", "India's Neighbours"],
+          "estimated_hours": 4,
+          "weightage": "medium"
+        },
+        {
+          "id": "sst-9-geo-ch02",
+          "order": 7,
+          "name": "Physical Features of India",
+          "description": "Major physiographic divisions of India",
+          "topics": ["Major Physiographic Divisions", "The Himalayan Mountains", "The Northern Plains", "The Peninsular Plateau", "The Indian Desert", "The Coastal Plains", "The Islands"],
+          "estimated_hours": 8,
+          "weightage": "high"
+        },
+        {
+          "id": "sst-9-geo-ch03",
+          "order": 8,
+          "name": "Drainage",
+          "description": "Rivers and drainage systems of India",
+          "topics": ["Drainage Systems in India", "The Himalayan Rivers", "The Peninsular Rivers", "Lakes", "Role of Rivers in the Economy", "River Pollution"],
+          "estimated_hours": 8,
+          "weightage": "high"
+        },
+        {
+          "id": "sst-9-geo-ch04",
+          "order": 9,
+          "name": "Climate",
+          "description": "Climate of India and monsoons",
+          "topics": ["Climatic Controls", "Factors Influencing India's Climate", "The Indian Monsoon", "The Seasons", "Distribution of Rainfall"],
+          "estimated_hours": 8,
+          "weightage": "high"
+        },
+        {
+          "id": "sst-9-geo-ch05",
+          "order": 10,
+          "name": "Natural Vegetation and Wildlife",
+          "description": "Flora and fauna of India",
+          "topics": ["Types of Vegetation", "Tropical Evergreen Forests", "Tropical Deciduous Forests", "Mangrove Forests", "Wildlife", "Conservation of Forest and Wildlife"],
+          "estimated_hours": 6,
+          "weightage": "medium"
+        },
+        {
+          "id": "sst-9-geo-ch06",
+          "order": 11,
+          "name": "Population",
+          "description": "Population distribution and growth in India",
+          "topics": ["Population Size and Distribution", "Population Growth", "Population Composition", "Population Policy"],
+          "estimated_hours": 6,
+          "weightage": "medium"
+        },
+        {
+          "id": "sst-9-civ-ch01",
+          "order": 12,
+          "name": "What is Democracy? Why Democracy?",
+          "description": "Understanding democracy and its features",
+          "topics": ["What is Democracy?", "Features of Democracy", "Why Democracy?", "Broader Meanings of Democracy"],
+          "estimated_hours": 6,
+          "weightage": "high"
+        },
+        {
+          "id": "sst-9-civ-ch02",
+          "order": 13,
+          "name": "Constitutional Design",
+          "description": "Making of the Indian Constitution",
+          "topics": ["Democratic Constitution in South Africa", "Why Do We Need a Constitution?", "Making of the Indian Constitution", "Guiding Values of the Indian Constitution"],
+          "estimated_hours": 8,
+          "weightage": "high"
+        },
+        {
+          "id": "sst-9-civ-ch03",
+          "order": 14,
+          "name": "Electoral Politics",
+          "description": "Elections and democracy",
+          "topics": ["Why Elections?", "What is Our System of Elections?", "What Makes Elections in India Democratic?", "Challenges to Free and Fair Elections"],
+          "estimated_hours": 8,
+          "weightage": "high"
+        },
+        {
+          "id": "sst-9-civ-ch04",
+          "order": 15,
+          "name": "Working of Institutions",
+          "description": "Parliament, Executive, and Judiciary",
+          "topics": ["How is a Major Policy Decision Taken?", "Parliament", "Political Executive", "The Judiciary"],
+          "estimated_hours": 8,
+          "weightage": "high"
+        },
+        {
+          "id": "sst-9-civ-ch05",
+          "order": 16,
+          "name": "Democratic Rights",
+          "description": "Rights in the Indian democracy",
+          "topics": ["Life Without Rights", "Rights in a Democracy", "Rights in the Indian Constitution", "Expanding Scope of Rights"],
+          "estimated_hours": 6,
+          "weightage": "high"
+        },
+        {
+          "id": "sst-9-eco-ch01",
+          "order": 17,
+          "name": "The Story of Village Palampur",
+          "description": "Organisation of production in a village",
+          "topics": ["Organisation of Production", "Farming in Palampur", "Non-Farm Activities in Palampur"],
+          "estimated_hours": 6,
+          "weightage": "medium"
+        },
+        {
+          "id": "sst-9-eco-ch02",
+          "order": 18,
+          "name": "People as Resource",
+          "description": "Human capital formation",
+          "topics": ["People as Resource", "Economic Activities by Men and Women", "Quality of Population", "Unemployment"],
+          "estimated_hours": 6,
+          "weightage": "medium"
+        },
+        {
+          "id": "sst-9-eco-ch03",
+          "order": 19,
+          "name": "Poverty as a Challenge",
+          "description": "Poverty in India and anti-poverty measures",
+          "topics": ["Two Typical Cases of Poverty", "Poverty as Seen by Social Scientists", "Poverty Estimates", "Vulnerable Groups", "Inter-State Disparities", "Global Poverty Scenario", "Causes of Poverty", "Anti-Poverty Measures"],
+          "estimated_hours": 8,
+          "weightage": "high"
+        },
+        {
+          "id": "sst-9-eco-ch04",
+          "order": 20,
+          "name": "Food Security in India",
+          "description": "Food security and Public Distribution System",
+          "topics": ["What is Food Security?", "Why Food Security?", "Who are Food Insecure?", "Food Security in India", "What is Buffer Stock?", "Public Distribution System", "Current Status of Public Distribution System"],
+          "estimated_hours": 6,
+          "weightage": "medium"
+        }
+      ]
+    },
+    {
+      "id": "english-9",
+      "name": "English",
+      "icon": "book-open",
+      "color": "#8B5CF6",
+      "total_chapters": 22,
+      "chapters": [
+        {
+          "id": "eng-9-beehive-ch01",
+          "order": 1,
+          "name": "The Fun They Had",
+          "description": "A story about future schools and learning",
+          "topics": ["Reading Comprehension", "Vocabulary", "Writing Skills"],
+          "estimated_hours": 4,
+          "weightage": "medium"
+        },
+        {
+          "id": "eng-9-beehive-ch02",
+          "order": 2,
+          "name": "The Sound of Music",
+          "description": "Stories of Evelyn Glennie and Bismillah Khan",
+          "topics": ["Reading Comprehension", "Character Analysis", "Music and Life"],
+          "estimated_hours": 4,
+          "weightage": "medium"
+        },
+        {
+          "id": "eng-9-beehive-ch03",
+          "order": 3,
+          "name": "The Little Girl",
+          "description": "A story about a father-daughter relationship",
+          "topics": ["Reading Comprehension", "Character Development", "Family Relationships"],
+          "estimated_hours": 4,
+          "weightage": "medium"
+        },
+        {
+          "id": "eng-9-beehive-ch04",
+          "order": 4,
+          "name": "A Truly Beautiful Mind",
+          "description": "The life of Albert Einstein",
+          "topics": ["Biography", "Scientific Achievement", "Reading Comprehension"],
+          "estimated_hours": 4,
+          "weightage": "medium"
+        },
+        {
+          "id": "eng-9-beehive-ch05",
+          "order": 5,
+          "name": "The Snake and the Mirror",
+          "description": "A humorous encounter with a snake",
+          "topics": ["Narrative Style", "Humor in Literature", "Reading Comprehension"],
+          "estimated_hours": 4,
+          "weightage": "medium"
+        },
+        {
+          "id": "eng-9-beehive-ch06",
+          "order": 6,
+          "name": "My Childhood",
+          "description": "APJ Abdul Kalam's childhood memories",
+          "topics": ["Autobiography", "Indian Culture", "Reading Comprehension"],
+          "estimated_hours": 4,
+          "weightage": "high"
+        },
+        {
+          "id": "eng-9-beehive-ch07",
+          "order": 7,
+          "name": "Packing",
+          "description": "A humorous account of packing for a trip",
+          "topics": ["Humor", "Character Study", "Reading Comprehension"],
+          "estimated_hours": 4,
+          "weightage": "medium"
+        },
+        {
+          "id": "eng-9-beehive-ch08",
+          "order": 8,
+          "name": "Reach for the Top",
+          "description": "Stories of Santosh Yadav and Maria Sharapova",
+          "topics": ["Biography", "Achievement", "Determination"],
+          "estimated_hours": 4,
+          "weightage": "medium"
+        },
+        {
+          "id": "eng-9-beehive-ch09",
+          "order": 9,
+          "name": "The Bond of Love",
+          "description": "A story about a pet bear",
+          "topics": ["Animal Stories", "Human-Animal Bond", "Reading Comprehension"],
+          "estimated_hours": 4,
+          "weightage": "medium"
+        },
+        {
+          "id": "eng-9-beehive-ch10",
+          "order": 10,
+          "name": "Kathmandu",
+          "description": "A travel account of Kathmandu",
+          "topics": ["Travel Writing", "Cultural Observation", "Reading Comprehension"],
+          "estimated_hours": 4,
+          "weightage": "medium"
+        },
+        {
+          "id": "eng-9-beehive-ch11",
+          "order": 11,
+          "name": "If I Were You",
+          "description": "A one-act play about identity",
+          "topics": ["Drama", "Suspense", "Character Analysis"],
+          "estimated_hours": 4,
+          "weightage": "medium"
+        },
+        {
+          "id": "eng-9-poem-ch01",
+          "order": 12,
+          "name": "The Road Not Taken",
+          "description": "Robert Frost's poem about choices",
+          "topics": ["Poetry Analysis", "Symbolism", "Life Choices"],
+          "estimated_hours": 3,
+          "weightage": "high"
+        },
+        {
+          "id": "eng-9-poem-ch02",
+          "order": 13,
+          "name": "Wind",
+          "description": "A poem about the wind's power",
+          "topics": ["Poetry Analysis", "Metaphor", "Resilience"],
+          "estimated_hours": 3,
+          "weightage": "medium"
+        },
+        {
+          "id": "eng-9-poem-ch03",
+          "order": 14,
+          "name": "Rain on the Roof",
+          "description": "A poem about rain and memories",
+          "topics": ["Poetry Analysis", "Imagery", "Nostalgia"],
+          "estimated_hours": 3,
+          "weightage": "medium"
+        },
+        {
+          "id": "eng-9-poem-ch04",
+          "order": 15,
+          "name": "The Lake Isle of Innisfree",
+          "description": "Yeats' poem about peace and nature",
+          "topics": ["Poetry Analysis", "Nature", "Escapism"],
+          "estimated_hours": 3,
+          "weightage": "medium"
+        },
+        {
+          "id": "eng-9-poem-ch05",
+          "order": 16,
+          "name": "A Legend of the Northland",
+          "description": "A ballad about Saint Peter",
+          "topics": ["Ballad", "Moral Story", "Poetry Analysis"],
+          "estimated_hours": 3,
+          "weightage": "medium"
+        },
+        {
+          "id": "eng-9-poem-ch06",
+          "order": 17,
+          "name": "No Men Are Foreign",
+          "description": "A poem about universal brotherhood",
+          "topics": ["Poetry Analysis", "Humanity", "Peace"],
+          "estimated_hours": 3,
+          "weightage": "medium"
+        },
+        {
+          "id": "eng-9-poem-ch07",
+          "order": 18,
+          "name": "The Duck and the Kangaroo",
+          "description": "A humorous poem about friendship",
+          "topics": ["Poetry Analysis", "Humor", "Friendship"],
+          "estimated_hours": 3,
+          "weightage": "low"
+        },
+        {
+          "id": "eng-9-poem-ch08",
+          "order": 19,
+          "name": "On Killing a Tree",
+          "description": "A poem about destroying nature",
+          "topics": ["Poetry Analysis", "Environment", "Irony"],
+          "estimated_hours": 3,
+          "weightage": "medium"
+        },
+        {
+          "id": "eng-9-poem-ch09",
+          "order": 20,
+          "name": "The Snake Trying",
+          "description": "A poem about a harmless snake",
+          "topics": ["Poetry Analysis", "Nature", "Compassion"],
+          "estimated_hours": 3,
+          "weightage": "medium"
+        },
+        {
+          "id": "eng-9-poem-ch10",
+          "order": 21,
+          "name": "A Slumber Did My Spirit Seal",
+          "description": "Wordsworth's poem about loss",
+          "topics": ["Poetry Analysis", "Death", "Nature"],
+          "estimated_hours": 3,
+          "weightage": "low"
+        },
+        {
+          "id": "eng-9-grammar",
+          "order": 22,
+          "name": "Grammar and Writing",
+          "description": "Essential grammar and writing skills",
+          "topics": ["Tenses", "Modals", "Subject-Verb Agreement", "Reported Speech", "Active and Passive Voice", "Letter Writing", "Story Writing"],
+          "estimated_hours": 15,
+          "weightage": "high"
+        }
+      ]
+    },
+    {
+      "id": "hindi-9",
+      "name": "Hindi",
+      "icon": "languages",
+      "color": "#EF4444",
+      "total_chapters": 17,
+      "chapters": [
+        {
+          "id": "hindi-9-ch01",
+          "order": 1,
+          "name": "Do Bailon Ki Katha",
+          "description": "Premchand's story about two bullocks",
+          "topics": ["Prose Comprehension", "Character Analysis", "Vocabulary"],
+          "estimated_hours": 5,
+          "weightage": "high"
+        },
+        {
+          "id": "hindi-9-ch02",
+          "order": 2,
+          "name": "Lhasa Ki Or",
+          "description": "A travelogue about the journey to Lhasa",
+          "topics": ["Travel Writing", "Geography", "Reading Comprehension"],
+          "estimated_hours": 5,
+          "weightage": "medium"
+        },
+        {
+          "id": "hindi-9-ch03",
+          "order": 3,
+          "name": "Upbhoktavad Ki Sanskriti",
+          "description": "Essay on consumer culture",
+          "topics": ["Essay", "Social Commentary", "Critical Thinking"],
+          "estimated_hours": 5,
+          "weightage": "medium"
+        },
+        {
+          "id": "hindi-9-ch04",
+          "order": 4,
+          "name": "Sawle Sapnon Ki Yaad",
+          "description": "A prose piece about memories",
+          "topics": ["Prose", "Nostalgia", "Reading Comprehension"],
+          "estimated_hours": 5,
+          "weightage": "medium"
+        },
+        {
+          "id": "hindi-9-ch05",
+          "order": 5,
+          "name": "Nana Sahib Ki Putri",
+          "description": "Historical account of Manu and the freedom struggle",
+          "topics": ["History", "Biography", "Freedom Struggle"],
+          "estimated_hours": 5,
+          "weightage": "high"
+        },
+        {
+          "id": "hindi-9-ch06",
+          "order": 6,
+          "name": "Premchand Ke Phate Joote",
+          "description": "An essay on Premchand's simplicity",
+          "topics": ["Essay", "Character Study", "Social Commentary"],
+          "estimated_hours": 4,
+          "weightage": "medium"
+        },
+        {
+          "id": "hindi-9-ch07",
+          "order": 7,
+          "name": "Mere Bachpan Ke Din",
+          "description": "Mahadevi Verma's childhood memories",
+          "topics": ["Autobiography", "Childhood", "Women's Education"],
+          "estimated_hours": 5,
+          "weightage": "high"
+        },
+        {
+          "id": "hindi-9-ch08",
+          "order": 8,
+          "name": "Ek Kutta Aur Ek Maina",
+          "description": "Hazari Prasad Dwivedi's prose",
+          "topics": ["Prose", "Nature", "Observation"],
+          "estimated_hours": 4,
+          "weightage": "medium"
+        },
+        {
+          "id": "hindi-9-poem-ch01",
+          "order": 9,
+          "name": "Sakhiyan evam Sabad",
+          "description": "Kabir's dohas and poetry",
+          "topics": ["Poetry", "Bhakti Literature", "Philosophy"],
+          "estimated_hours": 4,
+          "weightage": "high"
+        },
+        {
+          "id": "hindi-9-poem-ch02",
+          "order": 10,
+          "name": "Vaakh",
+          "description": "Lalleshwari's poetry",
+          "topics": ["Poetry", "Kashmiri Literature", "Spirituality"],
+          "estimated_hours": 4,
+          "weightage": "medium"
+        },
+        {
+          "id": "hindi-9-poem-ch03",
+          "order": 11,
+          "name": "Sawaiyan",
+          "description": "Raskhan's devotional poetry",
+          "topics": ["Poetry", "Bhakti", "Krishna Devotion"],
+          "estimated_hours": 4,
+          "weightage": "medium"
+        },
+        {
+          "id": "hindi-9-poem-ch04",
+          "order": 12,
+          "name": "Kaidi Aur Kokila",
+          "description": "Makhan Lal Chaturvedi's patriotic poem",
+          "topics": ["Poetry", "Freedom Struggle", "Patriotism"],
+          "estimated_hours": 4,
+          "weightage": "high"
+        },
+        {
+          "id": "hindi-9-poem-ch05",
+          "order": 13,
+          "name": "Gram Shree",
+          "description": "Sumitranandan Pant's village poetry",
+          "topics": ["Poetry", "Nature", "Village Life"],
+          "estimated_hours": 4,
+          "weightage": "medium"
+        },
+        {
+          "id": "hindi-9-poem-ch06",
+          "order": 14,
+          "name": "Chandra Gahna Se Lautati Ber",
+          "description": "Kedarnath Agrawal's nature poetry",
+          "topics": ["Poetry", "Nature", "Rural Life"],
+          "estimated_hours": 4,
+          "weightage": "medium"
+        },
+        {
+          "id": "hindi-9-poem-ch07",
+          "order": 15,
+          "name": "Megh Aaye",
+          "description": "Sarveshwar Dayal Saxena's poem on monsoon",
+          "topics": ["Poetry", "Monsoon", "Imagery"],
+          "estimated_hours": 4,
+          "weightage": "medium"
+        },
+        {
+          "id": "hindi-9-poem-ch08",
+          "order": 16,
+          "name": "Yamraj Ki Disha",
+          "description": "Chandrakant Devtale's modern poetry",
+          "topics": ["Poetry", "Modern Hindi Poetry", "Social Commentary"],
+          "estimated_hours": 4,
+          "weightage": "medium"
+        },
+        {
+          "id": "hindi-9-grammar",
+          "order": 17,
+          "name": "Vyakaran evam Rachna",
+          "description": "Grammar and creative writing",
+          "topics": ["Sandhi", "Samas", "Muhavare", "Anuched Lekhan", "Patra Lekhan"],
+          "estimated_hours": 12,
+          "weightage": "high"
+        }
+      ]
+    }
+  ]
+}
