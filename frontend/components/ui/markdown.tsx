@@ -1,12 +1,12 @@
 'use client';
 
+import React, { memo, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import rehypeHighlight from 'rehype-highlight';
 import { cn } from '@/lib/utils';
-import { memo, useState } from 'react';
 import { RiFileCopyLine, RiCheckLine } from '@remixicon/react';
 
 // Import KaTeX CSS
@@ -94,7 +94,9 @@ export const Markdown = memo(function Markdown({ content, className }: MarkdownP
         components={{
           // Code blocks with copy button
           pre: ({ children, ...props }) => {
-            const codeElement = (children as any)?.props?.children;
+            const codeElement = React.isValidElement<{ children?: React.ReactNode }>(children)
+              ? children.props.children
+              : null;
             const codeText = typeof codeElement === 'string' ? codeElement : '';
             
             return (
