@@ -20,6 +20,7 @@ import {
   CLASS_LEVELS,
   BOARDS,
   SUBJECTS,
+  SUBJECTS_BY_CLASS,
 } from '@/lib/validations/auth.validation';
 import Link from 'next/link';
 import { RiLoader4Line, RiMailLine } from '@remixicon/react';
@@ -30,6 +31,7 @@ export function SignupForm() {
   const router = useRouter();
   const { signup, isLoading } = useAuth();
   const [selectedSubjects, setSelectedSubjects] = useState<string[]>([]);
+  const [selectedClass, setSelectedClass] = useState<number | null>(null);
   const [showVerificationMessage, setShowVerificationMessage] = useState(false);
   const [userEmail, setUserEmail] = useState('');
 
@@ -134,7 +136,14 @@ export function SignupForm() {
             <Label htmlFor="class">Class</Label>
             <Select
               disabled={isLoading}
-              onValueChange={(value) => setValue('class', parseInt(value))}
+              onValueChange={(value) => {
+                const classNum = parseInt(value);
+                setValue('class', classNum);
+                setSelectedClass(classNum);
+                // Clear subject selection when class changes
+                setSelectedSubjects([]);
+                setValue('subjects', []);
+              }}
             >
               <SelectTrigger id="class">
                 <SelectValue placeholder="Select" />
@@ -175,7 +184,7 @@ export function SignupForm() {
         <div className="space-y-2">
           <Label>Subjects</Label>
           <div className="grid grid-cols-2 gap-2 p-3 border rounded-xl max-h-32 overflow-y-auto">
-            {SUBJECTS.map((subject) => (
+            {(selectedClass ? SUBJECTS_BY_CLASS[selectedClass] ?? SUBJECTS : SUBJECTS).map((subject) => (
               <div key={subject.value} className="flex items-center space-x-2">
                 <Checkbox
                   id={subject.value}
@@ -192,17 +201,20 @@ export function SignupForm() {
               </div>
             ))}
           </div>
+          {!selectedClass && (
+            <p className="text-xs text-muted-foreground">Select a class first to see available subjects</p>
+          )}
           {errors.subjects && (
             <p className="text-sm text-destructive">{errors.subjects.message}</p>
           )}
         </div>
-        
+
         <Button type="submit" className="w-full" disabled={isLoading}>
           {isLoading && <RiLoader4Line className="mr-2 h-4 w-4 animate-spin" />}
           {isLoading ? 'Creating account...' : 'Create account'}
         </Button>
       </form>
-      
+
       <p className="text-sm text-center text-muted-foreground mt-6">
         Already have an account?{' '}
         <Link href="/login" className="text-foreground hover:underline font-medium">

@@ -29,24 +29,16 @@ import {
 import { toast } from 'sonner';
 import { useAuth } from '@/lib/hooks/use-auth';
 import { useTheme } from 'next-themes';
+import { API_URL } from '@/lib/api/client';
 
 const BOARDS = ['CBSE', 'ICSE', 'State Board'];
 
-const SUBJECTS = [
-  'Mathematics',
-  'Science',
-  'Physics',
-  'Chemistry',
-  'Biology',
-  'English',
-  'Hindi',
-  'Social Science',
-  'History',
-  'Geography',
-  'Computer Science',
-  'Economics',
-  'Political Science',
-];
+const SUBJECTS_BY_CLASS: Record<number, string[]> = {
+  9: ['Mathematics', 'Science', 'Social Science', 'English', 'Hindi'],
+  10: ['Mathematics', 'Science', 'Social Science', 'English', 'Hindi'],
+  11: ['Physics', 'Chemistry', 'Mathematics', 'Biology', 'English'],
+  12: ['Physics', 'Chemistry', 'Mathematics', 'Biology', 'English'],
+};
 
 interface ProfileData {
   name: string;
@@ -66,7 +58,7 @@ export default function SettingsPage() {
   const [profileData, setProfileData] = useState<ProfileData>({
     name: '',
     email: '',
-    class: 6,
+    class: 9,
     board: 'CBSE',
     subjects: [],
     daily_study_hours: 2,
@@ -80,7 +72,7 @@ export default function SettingsPage() {
   const fetchProfile = async () => {
     setIsLoading(true);
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/profile/full`, {
+      const response = await fetch(`${API_URL}/api/profile/full`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
@@ -90,11 +82,11 @@ export default function SettingsPage() {
         const result = await response.json();
         const userData = result.data;
         const userProfile = userData.user_profile;
-        
+
         setProfileData({
           name: userData.name || '',
           email: userData.email || '',
-          class: userProfile?.class || 6,
+          class: userProfile?.class || 9,
           board: userProfile?.board || 'CBSE',
           subjects: userProfile?.subjects || [],
           daily_study_hours: userProfile?.daily_study_hours || 2,
@@ -117,7 +109,7 @@ export default function SettingsPage() {
     setIsSaving(true);
 
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/profile`, {
+      const response = await fetch(`${API_URL}/api/profile`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
@@ -137,9 +129,9 @@ export default function SettingsPage() {
       }
 
       toast.success('Profile updated successfully!');
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error('Error updating profile:', error);
-      toast.error(error.message || 'Failed to update profile');
+      toast.error(error instanceof Error ? error.message : 'Failed to update profile');
     } finally {
       setIsSaving(false);
     }
@@ -213,15 +205,23 @@ export default function SettingsPage() {
                   <Label htmlFor="class">Class</Label>
                   <Select
                     value={profileData.class.toString()}
-                    onValueChange={(value) =>
-                      setProfileData({ ...profileData, class: parseInt(value) })
-                    }
+                    onValueChange={(value) => {
+                      const classNum = parseInt(value);
+                      setProfileData((prev) => ({
+                        ...prev,
+                        class: classNum,
+                        // Clear subjects that don't exist in the new class's curriculum
+                        subjects: prev.subjects.filter((s) =>
+                          (SUBJECTS_BY_CLASS[classNum] ?? []).includes(s)
+                        ),
+                      }));
+                    }}
                   >
                     <SelectTrigger id="class">
                       <SelectValue />
                     </SelectTrigger>
                     <SelectContent>
-                      {[6, 7, 8, 9, 10, 11, 12].map((cls) => (
+                      {[9, 10, 11, 12].map((cls) => (
                         <SelectItem key={cls} value={cls.toString()}>
                           Class {cls}
                         </SelectItem>
@@ -255,14 +255,14 @@ export default function SettingsPage() {
                 <Select
                   value={profileData.daily_study_hours.toString()}
                   onValueChange={(value) =>
-                    setProfileData({ ...profileData, daily_study_hours: parseFloat(value) })
+                    setProfileData({ ...profileData, daily_study_hours: parseInt(value, 10) })
                   }
                 >
                   <SelectTrigger id="daily_study_hours">
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent>
-                    {[0.5, 1, 1.5, 2, 2.5, 3, 4, 5, 6].map((hours) => (
+                    {[1, 2, 3, 4, 5, 6].map((hours) => (
                       <SelectItem key={hours} value={hours.toString()}>
                         {hours} {hours === 1 ? 'hour' : 'hours'} per day
                       </SelectItem>
@@ -276,10 +276,10 @@ export default function SettingsPage() {
               <div className="space-y-3">
                 <Label>Subjects</Label>
                 <p className="text-sm text-muted-foreground">
-                  Select the subjects you're currently studying
+                  Select the subjects you&apos;re currently studying
                 </p>
                 <div className="grid grid-cols-2 gap-3 md:grid-cols-3">
-                  {SUBJECTS.map((subject) => (
+                  {(SUBJECTS_BY_CLASS[profileData.class] ?? []).map((subject) => (
                     <div key={subject} className="flex items-center space-x-2">
                       <Checkbox
                         id={subject}

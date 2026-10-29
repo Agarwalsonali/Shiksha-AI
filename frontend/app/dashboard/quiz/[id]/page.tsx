@@ -8,10 +8,10 @@ import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from '@/components/ui/label';
 import { Progress } from '@/components/ui/progress';
 import { Badge } from '@/components/ui/badge';
-import { 
-  RiCheckLine, 
-  RiCloseLine, 
-  RiLoader4Line, 
+import {
+  RiCheckLine,
+  RiCloseLine,
+  RiLoader4Line,
   RiArrowLeftLine,
   RiRefreshLine,
   RiTrophyLine,
@@ -21,6 +21,7 @@ import {
 import { toast } from 'sonner';
 import { cn } from '@/lib/utils';
 import { Markdown } from '@/components/ui/markdown';
+import { API_URL } from '@/lib/api/client';
 
 interface Question {
   question: string;
@@ -87,7 +88,7 @@ export default function QuizAttemptPage() {
   const fetchQuiz = useCallback(async () => {
     setIsLoading(true);
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/quiz/${quizId}`, {
+      const response = await fetch(`${API_URL}/api/quiz/${quizId}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
@@ -97,7 +98,7 @@ export default function QuizAttemptPage() {
 
       const data = await response.json();
       setQuizData(data.data);
-      
+
       // If quiz has been completed, show results directly
       if (data.data.latest_attempt) {
         setResults({
@@ -155,7 +156,7 @@ export default function QuizAttemptPage() {
         selected_answer: answer as 'A' | 'B' | 'C' | 'D',
       }));
 
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/quiz/attempt`, {
+      const response = await fetch(`${API_URL}/api/quiz/attempt`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -203,24 +204,24 @@ export default function QuizAttemptPage() {
         {/* Score Card */}
         <Card className={cn(
           "border-2",
-          isExcellent ? "border-green-500 bg-green-500/5" : 
-          isPassing ? "border-primary bg-primary/5" : 
-          "border-orange-500 bg-orange-500/5"
+          isExcellent ? "border-green-500 bg-green-500/5" :
+            isPassing ? "border-primary bg-primary/5" :
+              "border-orange-500 bg-orange-500/5"
         )}>
           <CardContent className="pt-8 pb-8">
             <div className="text-center space-y-4">
               {/* Trophy Icon */}
               <div className={cn(
                 "mx-auto w-20 h-20 rounded-full flex items-center justify-center",
-                isExcellent ? "bg-green-500/20" : 
-                isPassing ? "bg-primary/20" : 
-                "bg-orange-500/20"
+                isExcellent ? "bg-green-500/20" :
+                  isPassing ? "bg-primary/20" :
+                    "bg-orange-500/20"
               )}>
                 <RiTrophyLine className={cn(
                   "h-10 w-10",
-                  isExcellent ? "text-green-500" : 
-                  isPassing ? "text-primary" : 
-                  "text-orange-500"
+                  isExcellent ? "text-green-500" :
+                    isPassing ? "text-primary" :
+                      "text-orange-500"
                 )} />
               </div>
 
@@ -228,9 +229,9 @@ export default function QuizAttemptPage() {
               <div>
                 <div className={cn(
                   "text-6xl font-bold",
-                  isExcellent ? "text-green-500" : 
-                  isPassing ? "text-primary" : 
-                  "text-orange-500"
+                  isExcellent ? "text-green-500" :
+                    isPassing ? "text-primary" :
+                      "text-orange-500"
                 )}>
                   {scorePercent.toFixed(0)}%
                 </div>
@@ -280,20 +281,20 @@ export default function QuizAttemptPage() {
           </CardHeader>
           <CardContent className="space-y-4">
             {results.results.map((result, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className={cn(
                   "rounded-lg border p-4",
-                  result.is_correct 
-                    ? "border-green-500/50 bg-green-500/5" 
+                  result.is_correct
+                    ? "border-green-500/50 bg-green-500/5"
                     : "border-red-500/50 bg-red-500/5"
                 )}
               >
                 <div className="flex items-start gap-3">
                   <div className={cn(
                     "shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-medium",
-                    result.is_correct 
-                      ? "bg-green-500 text-white" 
+                    result.is_correct
+                      ? "bg-green-500 text-white"
                       : "bg-red-500 text-white"
                   )}>
                     {result.is_correct ? <RiCheckLine className="h-4 w-4" /> : <RiCloseLine className="h-4 w-4" />}
@@ -320,8 +321,8 @@ export default function QuizAttemptPage() {
                       )}
                       {result.explanation && (
                         <div className="mt-2 border-l-2 border-muted pl-2">
-                          <Markdown 
-                            content={result.explanation} 
+                          <Markdown
+                            content={result.explanation}
                             className="text-xs text-muted-foreground [&_p]:my-1"
                           />
                         </div>
@@ -336,15 +337,15 @@ export default function QuizAttemptPage() {
 
         {/* Actions */}
         <div className="flex gap-3">
-          <Button 
-            onClick={() => router.push('/dashboard/quiz')} 
+          <Button
+            onClick={() => router.push('/dashboard/quiz')}
             variant="outline"
             className="flex-1"
           >
             <RiArrowLeftLine className="mr-2 h-4 w-4" />
             Back to Quizzes
           </Button>
-          <Button 
+          <Button
             onClick={handleRetryQuiz}
             className="flex-1"
           >
@@ -405,19 +406,19 @@ export default function QuizAttemptPage() {
             className="space-y-3"
           >
             {Object.entries(currentQ.options).map(([key, option]) => (
-              <div 
-                key={key} 
+              <div
+                key={key}
                 className={cn(
                   "flex items-start space-x-3 rounded-lg border p-4 cursor-pointer transition-colors w-full",
-                  answers[currentQuestion] === key 
-                    ? "border-primary bg-primary/5" 
+                  answers[currentQuestion] === key
+                    ? "border-primary bg-primary/5"
                     : "hover:bg-muted/50"
                 )}
                 onClick={() => setAnswers((prev) => ({ ...prev, [currentQuestion]: key }))}
               >
                 <RadioGroupItem value={key} id={`q${currentQuestion}-option-${key}`} className="mt-0.5 shrink-0" />
-                <Label 
-                  htmlFor={`q${currentQuestion}-option-${key}`} 
+                <Label
+                  htmlFor={`q${currentQuestion}-option-${key}`}
                   className="flex-1 cursor-pointer text-sm leading-relaxed"
                 >
                   <span className="font-semibold mr-2">{key}.</span>
@@ -438,8 +439,8 @@ export default function QuizAttemptPage() {
             </Button>
 
             {currentQuestion === quizData.questions.length - 1 ? (
-              <Button 
-                onClick={handleSubmit} 
+              <Button
+                onClick={handleSubmit}
                 disabled={isSubmitting || Object.keys(answers).length !== quizData.questions.length}
               >
                 {isSubmitting ? (

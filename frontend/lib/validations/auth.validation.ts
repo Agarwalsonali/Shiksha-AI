@@ -37,6 +37,39 @@ export const BOARDS = [
   { value: 'State Board', label: 'State Board' },
 ];
 
+// Subjects available per class based on actual curriculum data
+export const SUBJECTS_BY_CLASS: Record<number, { value: string; label: string }[]> = {
+  9: [
+    { value: 'Mathematics', label: 'Mathematics' },
+    { value: 'Science', label: 'Science' },
+    { value: 'Social Science', label: 'Social Science' },
+    { value: 'English', label: 'English' },
+    { value: 'Hindi', label: 'Hindi' },
+  ],
+  10: [
+    { value: 'Mathematics', label: 'Mathematics' },
+    { value: 'Science', label: 'Science' },
+    { value: 'Social Science', label: 'Social Science' },
+    { value: 'English', label: 'English' },
+    { value: 'Hindi', label: 'Hindi' },
+  ],
+  11: [
+    { value: 'Physics', label: 'Physics' },
+    { value: 'Chemistry', label: 'Chemistry' },
+    { value: 'Mathematics', label: 'Mathematics' },
+    { value: 'Biology', label: 'Biology' },
+    { value: 'English', label: 'English' },
+  ],
+  12: [
+    { value: 'Physics', label: 'Physics' },
+    { value: 'Chemistry', label: 'Chemistry' },
+    { value: 'Mathematics', label: 'Mathematics' },
+    { value: 'Biology', label: 'Biology' },
+    { value: 'English', label: 'English' },
+  ],
+};
+
+// Fallback flat list (shown before a class is selected)
 export const SUBJECTS = [
   { value: 'Mathematics', label: 'Mathematics' },
   { value: 'Science', label: 'Science' },
@@ -46,9 +79,4 @@ export const SUBJECTS = [
   { value: 'English', label: 'English' },
   { value: 'Hindi', label: 'Hindi' },
   { value: 'Social Science', label: 'Social Science' },
-  { value: 'History', label: 'History' },
-  { value: 'Geography', label: 'Geography' },
-  { value: 'Economics', label: 'Economics' },
-  { value: 'Political Science', label: 'Political Science' },
-  { value: 'Computer Science', label: 'Computer Science' },
 ];

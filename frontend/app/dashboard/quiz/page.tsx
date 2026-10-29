@@ -14,17 +14,18 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import { 
-  RiQuestionLine, 
-  RiLoader4Line, 
-  RiSparklingLine, 
-  RiCheckLine, 
+import {
+  RiQuestionLine,
+  RiLoader4Line,
+  RiSparklingLine,
+  RiCheckLine,
   RiTimeLine,
-  RiPlayCircleLine 
+  RiPlayCircleLine
 } from '@remixicon/react';
 import { toast } from 'sonner';
 import { formatDistanceToNow } from 'date-fns';
 import { useAuth } from '@/lib/hooks/use-auth';
+import { API_URL } from '@/lib/api/client';
 
 interface Chapter {
   id: string;
@@ -64,19 +65,29 @@ export default function QuizPage() {
     num_questions: 5,
   });
 
-  // Get subjects from user profile or use defaults
-  const userSubjects = profile?.subjects || [
-    'Mathematics',
-    'Science',
-    'Physics',
-    'Chemistry',
-    'Biology',
-    'English',
-  ];
   // Only use valid classes (9-12), default to 11 if invalid or not set
-  const userClass = profile?.class && [9, 10, 11, 12].includes(profile.class) 
-    ? profile.class 
+  const userClass = profile?.class && [9, 10, 11, 12].includes(profile.class)
+    ? profile.class
     : 11;
+
+  // Subjects that actually exist in the curriculum for each class
+  const CURRICULUM_SUBJECTS: Record<number, string[]> = {
+    9: ['Mathematics', 'Science', 'Social Science', 'English', 'Hindi'],
+    10: ['Mathematics', 'Science', 'Social Science', 'English', 'Hindi'],
+    11: ['Physics', 'Chemistry', 'Mathematics', 'Biology', 'English'],
+    12: ['Physics', 'Chemistry', 'Mathematics', 'Biology', 'English'],
+  };
+
+  // Intersect profile subjects with what the curriculum actually has for this class,
+  // falling back to the full curriculum list if the profile has no matching subjects.
+  const curriculumSubjectsForClass = CURRICULUM_SUBJECTS[userClass] ?? [];
+  const profileSubjects = profile?.subjects ?? [];
+  const validProfileSubjects = profileSubjects.filter((s) =>
+    curriculumSubjectsForClass.includes(s)
+  );
+  const userSubjects = validProfileSubjects.length > 0
+    ? validProfileSubjects
+    : curriculumSubjectsForClass;
 
   useEffect(() => {
     fetchQuizHistory();
@@ -95,10 +106,10 @@ export default function QuizPage() {
     setIsLoadingChapters(true);
     setChapters([]);
     setFormData(prev => ({ ...prev, chapter: '', topic: '' }));
-    
+
     try {
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}/api/curriculum/${userClass}/${encodeURIComponent(subject)}`,
+        `${API_URL}/api/curriculum/${userClass}/${encodeURIComponent(subject)}`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
@@ -110,10 +121,13 @@ export default function QuizPage() {
         const data = await response.json();
         setChapters(data.data.subject?.chapters || []);
       } else {
-        console.error('Failed to fetch chapters');
+        const data = await response.json().catch(() => null);
+        const message = data?.error?.message || `Subject not found for class ${userClass}`;
+        toast.error(message);
       }
     } catch (error) {
       console.error('Error fetching chapters:', error);
+      toast.error('Failed to load chapters. Please try again.');
     } finally {
       setIsLoadingChapters(false);
     }
@@ -128,7 +142,7 @@ export default function QuizPage() {
     setIsLoadingHistory(true);
     try {
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}/api/quiz/list?limit=10`,
+        `${API_URL}/api/quiz/list?limit=10`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
@@ -156,7 +170,7 @@ export default function QuizPage() {
     setIsGenerating(true);
 
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/quiz/generate`, {
+      const response = await fetch(`${API_URL}/api/quiz/generate`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -172,10 +186,10 @@ export default function QuizPage() {
 
       const data = await response.json();
       toast.success('Quiz generated successfully!');
-      
+
       // Refresh quiz history
       await fetchQuizHistory();
-      
+
       // Navigate to quiz attempt page
       router.push(`/dashboard/quiz/${data.data.quiz.id}`);
     } catch (error: any) {
