@@ -2,7 +2,7 @@ import type { Response } from 'express';
 import type { AuthRequest } from '../middleware/auth';
 import { supabase } from '../db/supabase';
 import { successResponse } from '../utils/apiResponse';
-import { NotFoundError, DatabaseError, ValidationError } from '../utils/apiError';
+import { ApiError, NotFoundError, DatabaseError, ValidationError } from '../utils/apiError';
 import { llmService } from '../services/llm.service';
 import {
   getStudyPlanPrompt,
@@ -88,7 +88,10 @@ export const generatePlan = async (req: AuthRequest, res: Response) => {
       }
     );
 
-    logger.info({ phases: planStructure.phases.length, totalDays: planStructure.total_days }, 'Study plan generated');
+    logger.info(
+      { phases: planStructure.phases?.length ?? 0, totalDays: planStructure.total_days },
+      'Study plan generated'
+    );
 
     // Use exam_date as plan_date to avoid collision with other plans created today
     const planDate = input.exam_date.split('T')[0];
@@ -175,8 +178,12 @@ export const generatePlan = async (req: AuthRequest, res: Response) => {
       })
     );
   } catch (error) {
-    logger.error({ error, userId, input }, 'Study plan generation failed');
-    if (error instanceof ValidationError || error instanceof DatabaseError) throw error;
+    logger.error(
+      { error: { name: (error as Error)?.name, message: (error as Error)?.message }, userId, input },
+      'Study plan generation failed'
+    );
+    // Preserve the real cause (AI provider, validation, database) for the client.
+    if (error instanceof ApiError) throw error;
     throw new DatabaseError('Failed to generate study plan');
   }
 };
@@ -706,8 +713,11 @@ export const generateChapterPlan = async (req: AuthRequest, res: Response) => {
       })
     );
   } catch (error) {
-    logger.error({ error, userId, input }, 'Chapter plan generation failed');
-    if (error instanceof ValidationError || error instanceof DatabaseError) throw error;
+    logger.error(
+      { error: { name: (error as Error)?.name, message: (error as Error)?.message }, userId, input },
+      'Chapter plan generation failed'
+    );
+    if (error instanceof ApiError) throw error;
     throw new DatabaseError('Failed to generate chapter plan');
   }
 };
@@ -1051,8 +1061,11 @@ export const generateTopicPlan = async (req: AuthRequest, res: Response) => {
     const result = await plannerService.generateTopicPlan(userId, input);
     res.json(successResponse(result));
   } catch (error) {
-    logger.error({ error, userId, input }, 'Topic plan generation failed');
-    if (error instanceof ValidationError || error instanceof DatabaseError) throw error;
+    logger.error(
+      { error: { name: (error as Error)?.name, message: (error as Error)?.message }, userId, input },
+      'Topic plan generation failed'
+    );
+    if (error instanceof ApiError) throw error;
     throw new DatabaseError('Failed to generate topic plan');
   }
 };

@@ -5,11 +5,21 @@ import { z } from 'zod';
  * POST /api/quiz/generate
  */
 export const generateQuizSchema = z.object({
-  subject: z.string().min(1, 'Subject is required'),
-  chapter: z.string().min(1, 'Chapter is required'),
-  topic: z.string().optional(),
-  difficulty: z.enum(['easy', 'medium', 'hard']).default('medium'),
-  num_questions: z.number().int().min(1).max(20).default(5),
+  subject: z.string().trim().min(1, 'Subject is required'),
+  chapter: z.string().trim().min(1, 'Chapter is required'),
+  topic: z.preprocess(
+    (value) => {
+      if (typeof value !== 'string') return value;
+      const trimmed = value.trim();
+      return trimmed === '' ? undefined : trimmed;
+    },
+    z.string().optional()
+  ),
+  difficulty: z.preprocess(
+    (value) => (typeof value === 'string' ? value.toLowerCase() : value),
+    z.enum(['easy', 'medium', 'hard']).default('medium')
+  ),
+  num_questions: z.coerce.number().int().min(1).max(20).default(5),
   question_type: z.enum(['mcq', 'true-false', 'fill-blank', 'short-answer']).optional(),
 });
 

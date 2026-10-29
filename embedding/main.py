@@ -15,26 +15,42 @@ from langchain_google_genai import GoogleGenerativeAIEmbeddings
 load_dotenv()
 
 # Configuration
-DATA_DIR = Path("../data")
-WEAVIATE_URL = os.getenv("WEAVIATE_URL", "http://localhost:8080")
+# Resolve relative to this file so the script works from any cwd.
+DATA_DIR = Path(__file__).resolve().parent.parent / "data"
+WEAVIATE_URL = os.getenv("WEAVIATE_URL")
+WEAVIATE_API_KEY = os.getenv("WEAVIATE_API_KEY")
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 COLLECTION_NAME = "NCERTChunks"
-EMBEDDING_MODEL = "text-embedding-ada-002"
+# Google embedding model. `text-embedding-ada-002` is an OpenAI model and cannot
+# be used with GoogleGenerativeAIEmbeddings.
+EMBEDDING_MODEL = os.getenv("GOOGLE_EMBEDDING_MODEL", "gemini-embedding-001")
 CHUNK_SIZE = 600
 CHUNK_OVERLAP = 80
 
 
 def setup_weaviate_client():
-    """Connect to Weaviate instance"""
+    """Connect to Weaviate (cloud when WEAVIATE_URL is set, otherwise local)."""
     try:
-        client = weaviate.connect_to_local(
-            host="localhost",
-            port=8080,
-            grpc_port=50051,
-        )
+        if WEAVIATE_URL:
+            auth = None
+            if WEAVIATE_API_KEY:
+                auth = weaviate.auth.AuthApiKey(WEAVIATE_API_KEY)
+            client = weaviate.connect_to_weaviate_cloud(
+                cluster_url=WEAVIATE_URL,
+                auth_credentials=auth,
+            )
+            target = WEAVIATE_URL
+        else:
+            client = weaviate.connect_to_local(
+                host="localhost",
+                port=8080,
+                grpc_port=50051,
+            )
+            target = "localhost:8080"
+
         if not client.is_ready():
             raise ConnectionError("Weaviate is not ready")
-        print("✅ Connected to Weaviate")
+        print(f"✅ Connected to Weaviate ({target})")
         return client
     except Exception as e:
         print(f"❌ Failed to connect to Weaviate: {e}")

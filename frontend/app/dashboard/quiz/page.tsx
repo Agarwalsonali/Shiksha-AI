@@ -33,6 +33,8 @@ interface Chapter {
   name: string;
 }
 
+type QuizDifficulty = 'easy' | 'medium' | 'hard';
+
 interface Quiz {
   id: string;
   subject: string;
@@ -61,7 +63,7 @@ export default function QuizPage() {
     subject: '',
     chapter: '',
     topic: '',
-    difficulty: 'medium',
+    difficulty: 'medium' as QuizDifficulty,
     num_questions: 5,
   });
 
@@ -170,18 +172,71 @@ export default function QuizPage() {
     setIsGenerating(true);
 
     try {
+      const topic = formData.topic.trim();
+      const payload = {
+        subject: formData.subject.trim(),
+        chapter: formData.chapter.trim(),
+        difficulty: formData.difficulty,
+        num_questions: Number(formData.num_questions),
+        ...(topic ? { topic } : {}),
+      };
+
       const response = await fetch(`${API_URL}/api/quiz/generate`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(payload),
       });
 
       if (!response.ok) {
-        const error = await response.json();
-        throw new Error(error.error?.message || 'Failed to generate quiz');
+        let errorPayload: {
+          error?: {
+            message?: string;
+            details?: Array<{ path?: string; message?: string }>;
+          };
+          message?: string;
+        } | null = null;
+        let fallbackText = '';
+
+        try {
+          const contentType = response.headers.get('content-type') || '';
+          if (contentType.includes('application/json')) {
+            errorPayload = await response.json();
+          } else {
+            fallbackText = (await response.text()).trim();
+          }
+        } catch {
+          fallbackText = '';
+        }
+
+        const details = errorPayload?.error?.details;
+        if (Array.isArray(details) && details.length > 0) {
+          const detailMessage = details
+            .map((detail: { path?: string; message?: string }) => detail.message)
+            .filter(Boolean)
+            .join(', ');
+          throw new Error(
+            detailMessage ||
+              errorPayload?.error?.message ||
+              errorPayload?.message ||
+              'Failed to generate quiz'
+          );
+        }
+
+        const statusPrefix = `Request failed (${response.status})`;
+        const errorMessage =
+          errorPayload?.error?.message ||
+          errorPayload?.message ||
+          fallbackText ||
+          statusPrefix;
+
+        throw new Error(
+          errorMessage === 'Failed to generate quiz'
+            ? `${errorMessage} (${response.status})`
+            : errorMessage
+        );
       }
 
       const data = await response.json();
@@ -192,9 +247,9 @@ export default function QuizPage() {
 
       // Navigate to quiz attempt page
       router.push(`/dashboard/quiz/${data.data.quiz.id}`);
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error('Error generating quiz:', error);
-      toast.error(error.message || 'Failed to generate quiz');
+      toast.error(error instanceof Error ? error.message : 'Failed to generate quiz');
     } finally {
       setIsGenerating(false);
     }
@@ -279,7 +334,7 @@ export default function QuizPage() {
               <Label htmlFor="difficulty">Difficulty</Label>
               <Select
                 value={formData.difficulty}
-                onValueChange={(value: any) => setFormData({ ...formData, difficulty: value })}
+                onValueChange={(value: QuizDifficulty) => setFormData({ ...formData, difficulty: value })}
               >
                 <SelectTrigger id="difficulty" className="w-full">
                   <SelectValue />

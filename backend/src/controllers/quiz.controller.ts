@@ -1,20 +1,37 @@
 import type { Response } from 'express';
 import type { AuthRequest } from '../middleware/auth';
 import { supabase } from '../db/supabase';
-import { successResponse, errorResponse } from '../utils/apiResponse';
-import { NotFoundError, DatabaseError, ValidationError } from '../utils/apiError';
+import { successResponse } from '../utils/apiResponse';
+import { ApiError, NotFoundError, DatabaseError, ValidationError, ExternalServiceError } from '../utils/apiError';
 import { llmService } from '../services/llm.service';
 import { ragService } from '../services/rag.service';
 import { getQuizGenerationPrompt, type QuizQuestion } from '../prompts/quiz.prompts';
 import { logger } from '../utils/logger';
 import { gamificationService, XP_AWARDS } from '../services/gamification.service';
 import { iqService } from '../services/iq.service';
+import { z } from 'zod';
 import type {
   GenerateQuizInput,
   SubmitAttemptInput,
   ListQuizzesInput,
   GetQuizAttemptsInput,
 } from '../schemas/quiz.schema';
+
+const quizQuestionSchema = z.object({
+  question: z.string().min(1),
+  options: z.object({
+    A: z.string().min(1),
+    B: z.string().min(1),
+    C: z.string().min(1),
+    D: z.string().min(1),
+  }),
+  correct_answer: z.enum(['A', 'B', 'C', 'D']),
+  explanation: z.string().min(1),
+  difficulty: z.enum(['easy', 'medium', 'hard']),
+  topic: z.string().optional(),
+});
+
+const quizQuestionsSchema = z.array(quizQuestionSchema).min(1);
 
 /**
  * Generate a new quiz with AI
@@ -79,7 +96,7 @@ export const generateQuiz = async (req: AuthRequest, res: Response) => {
     logger.info({ operation: 'quiz-generation', promptLength: userPrompt.length }, 'Generating quiz with AI');
 
     // Generate questions as JSON
-    const questions = await llmService.generateJSON<QuizQuestion[]>(
+    const generated = await llmService.generateJSON<QuizQuestion[] | { questions: QuizQuestion[] }>(
       systemPrompt,
       userPrompt,
       {
@@ -88,6 +105,21 @@ export const generateQuiz = async (req: AuthRequest, res: Response) => {
       }
     );
 
+    const candidateQuestions = Array.isArray(generated)
+      ? generated
+      : generated?.questions;
+    const parsedQuestions = quizQuestionsSchema.safeParse(
+      Array.isArray(candidateQuestions) ? candidateQuestions.map(normalizeQuestion) : candidateQuestions
+    );
+    if (!parsedQuestions.success) {
+      logger.error(
+        { issues: parsedQuestions.error.issues, generatedType: typeof generated },
+        'Quiz generation returned invalid question format'
+      );
+      throw new ExternalServiceError('AI returned an invalid quiz format. Please try generating again.');
+    }
+
+    const questions = parsedQuestions.data;
     logger.info({ questionCount: questions.length }, 'Quiz questions generated');
 
     // Save quiz to database
@@ -140,11 +172,55 @@ export const generateQuiz = async (req: AuthRequest, res: Response) => {
       })
     );
   } catch (error) {
-    logger.error({ error, userId, input }, 'Quiz generation failed');
-    if (error instanceof ValidationError || error instanceof DatabaseError) throw error;
-    throw new DatabaseError('Failed to generate quiz');
+    logger.error(
+      {
+        error: { name: (error as Error)?.name, message: (error as Error)?.message },
+        userId,
+        input,
+      },
+      'Quiz generation failed'
+    );
+    // Preserve the real cause (AI provider, validation, database) so the client
+    // receives an actionable message instead of a generic failure.
+    if (error instanceof ApiError) throw error;
+    throw new ExternalServiceError('Quiz generation failed. Please try again.');
   }
 };
+
+/**
+ * Normalize small, common variations in AI-generated question objects before
+ * strict validation (option arrays instead of A-D keys, "Option A" answers).
+ */
+function normalizeQuestion(raw: unknown): unknown {
+  if (!raw || typeof raw !== 'object') return raw;
+
+  const question = { ...(raw as Record<string, unknown>) };
+
+  // options: { A, B, C, D } is expected; accept an array of four choices too.
+  if (Array.isArray(question.options)) {
+    const letters = ['A', 'B', 'C', 'D'];
+    question.options = Object.fromEntries(
+      question.options.slice(0, 4).map((value, index) => [letters[index], String(value)])
+    );
+  }
+
+  // correct_answer: accept "a", "A.", "Option B", or the full option text.
+  if (typeof question.correct_answer === 'string') {
+    const answer = question.correct_answer.trim();
+    const letterMatch = answer.match(/\b([A-D])\b/i) || answer.match(/^([A-D])[.):]/i);
+    if (letterMatch?.[1]) {
+      question.correct_answer = letterMatch[1].toUpperCase();
+    } else if (question.options && typeof question.options === 'object') {
+      const options = question.options as Record<string, unknown>;
+      const matchedKey = Object.keys(options).find(
+        (key) => String(options[key] ?? '').trim().toLowerCase() === answer.toLowerCase()
+      );
+      if (matchedKey) question.correct_answer = matchedKey;
+    }
+  }
+
+  return question;
+}
 
 /**
  * Submit quiz attempt and get results
@@ -347,7 +423,7 @@ export const getQuiz = async (req: AuthRequest, res: Response) => {
 export const listQuizzes = async (req: AuthRequest, res: Response) => {
   const userId = req.user!.id;
   const rawInput = req.query as unknown as ListQuizzesInput;
-  
+
   // Apply defaults for pagination
   const input = {
     page: Number(rawInput.page) || 1,
@@ -387,10 +463,10 @@ export const listQuizzes = async (req: AuthRequest, res: Response) => {
 
     // Fetch latest attempts for all quizzes
     let quizzesWithAttempts = quizzes || [];
-    
+
     if (quizzes && quizzes.length > 0) {
       const quizIds = quizzes.map(q => q.id);
-      
+
       // Get all attempts for these quizzes, ordered by created_at desc
       const { data: attempts } = await supabase
         .from('quiz_attempts')
@@ -406,7 +482,7 @@ export const listQuizzes = async (req: AuthRequest, res: Response) => {
         total_questions: number;
         created_at: string;
       }>();
-      
+
       attempts?.forEach(attempt => {
         if (!latestAttempts.has(attempt.quiz_id)) {
           latestAttempts.set(attempt.quiz_id, attempt);

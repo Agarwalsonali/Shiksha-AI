@@ -61,6 +61,7 @@ export function PlanForm({ open, onOpenChange, onPlanCreated }: PlanFormProps) {
   const [subjects, setSubjects] = useState<Subject[]>([]);
   const [chapters, setChapters] = useState<Chapter[]>([]);
   const [userClass, setUserClass] = useState<number | null>(null);
+  const [loadError, setLoadError] = useState<string | null>(null);
 
   const [formData, setFormData] = useState({
     subject: '',
@@ -69,39 +70,44 @@ export function PlanForm({ open, onOpenChange, onPlanCreated }: PlanFormProps) {
     daily_study_hours: 2,
   });
 
-  // Fetch user profile and then subjects on mount
+  // Load the student's own class, then that class's curriculum.
   useEffect(() => {
     const fetchSubjects = async () => {
       setIsLoadingSubjects(true);
+      setLoadError(null);
       try {
-        // First get user profile to know their class
-        const profileData = await apiClient.get<{ profile: UserProfile }>('/api/profile');
-        const classNum = profileData.profile?.class || 11; // Default to class 11
-        setUserClass(classNum);
+        // GET /api/profile returns the profile object itself, not { profile }.
+        const profile = await apiClient.get<UserProfile>('/api/profile');
+        const classNum = profile?.class;
 
-        // Then fetch curriculum for that class
+        // Never fall back to another class: that offers chapters the planner
+        // will reject for this student.
+        if (!classNum || ![9, 10, 11, 12].includes(classNum)) {
+          setUserClass(null);
+          setSubjects([]);
+          setChapters([]);
+          setLoadError('Set your class in Settings before creating a study plan.');
+          return;
+        }
+
+        setUserClass(classNum);
         const data = await apiClient.get<CurriculumResponse>(`/api/curriculum/${classNum}`);
-        if (data.curriculum?.subjects) {
-          setSubjects(data.curriculum.subjects);
-        }
+        setSubjects(data.curriculum?.subjects ?? []);
       } catch (error) {
-        console.error('Failed to fetch subjects:', error);
-        // Fallback to class 11 curriculum
-        try {
-          const data = await apiClient.get<CurriculumResponse>('/api/curriculum/11');
-          if (data.curriculum?.subjects) {
-            setSubjects(data.curriculum.subjects);
-          }
-        } catch (fallbackError) {
-          console.error('Failed to fetch fallback curriculum:', fallbackError);
-        }
+        console.error('Failed to load class and subjects:', error);
+        setUserClass(null);
+        setSubjects([]);
+        setChapters([]);
+        setLoadError(
+          'Could not load your class and subjects. Complete your profile in Settings, then try again.'
+        );
       } finally {
         setIsLoadingSubjects(false);
       }
     };
 
     if (open) {
-      fetchSubjects();
+      void fetchSubjects();
     }
   }, [open]);
 
@@ -141,6 +147,12 @@ export function PlanForm({ open, onOpenChange, onPlanCreated }: PlanFormProps) {
 
     if (!formData.subject || !formData.chapter_id || !formData.deadline) {
       toast.error('Please fill in all required fields');
+      return;
+    }
+
+    // Guard against a chapter that is not part of this student's curriculum.
+    if (!chapters.some((chapter) => chapter.id === formData.chapter_id)) {
+      toast.error('Select a chapter from your class curriculum');
       return;
     }
 
@@ -202,6 +214,8 @@ export function PlanForm({ open, onOpenChange, onPlanCreated }: PlanFormProps) {
         </DialogHeader>
 
         <form onSubmit={handleSubmit} className="space-y-4">
+          {loadError && <p className="text-xs text-destructive">{loadError}</p>}
+
           {/* Subject */}
           <div className="space-y-2">
             <Label htmlFor="subject">Subject *</Label>

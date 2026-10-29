@@ -12,7 +12,7 @@ import {
   type ChapterInfo,
 } from '../prompts/planner.prompts';
 import { logger } from '../utils/logger';
-import { NotFoundError, DatabaseError, ValidationError } from '../utils/apiError';
+import { NotFoundError, DatabaseError, ValidationError, ExternalServiceError } from '../utils/apiError';
 import type {
   GeneratePlanInput,
   GenerateChapterPlanInput,
@@ -420,7 +420,31 @@ export const generateTopicPlan = async (
     }
   );
 
-  logger.info({ totalDays: planStructure.total_days, topics: planStructure.topics?.length }, 'Topic plan generated');
+  if (!planStructure || !Array.isArray(planStructure.topics) || planStructure.topics.length === 0) {
+    throw new ExternalServiceError('AI returned an incomplete study plan. Please try again.');
+  }
+
+  // Normalize AI output so malformed days/minutes cannot produce invalid task rows.
+  const maxDay = Math.max(1, Math.min(daysAvailable, 365));
+  planStructure.topics = planStructure.topics
+    .filter((topic) => typeof topic?.topic_name === 'string' && topic.topic_name.trim().length > 0)
+    .map((topic, index) => ({
+      ...topic,
+      topic_name: topic.topic_name.trim(),
+      day: Math.min(Math.max(Math.round(Number(topic.day)) || index + 1, 1), maxDay),
+      estimated_minutes: Math.max(5, Math.round(Number(topic.estimated_minutes)) || 30),
+    }));
+
+  if (planStructure.topics.length === 0) {
+    throw new ExternalServiceError('AI returned an incomplete study plan. Please try again.');
+  }
+
+  const quizDay =
+    planStructure.quiz_day !== undefined && planStructure.quiz_day !== null
+      ? Math.min(Math.max(Math.round(Number(planStructure.quiz_day)) || maxDay, 1), maxDay)
+      : undefined;
+
+  logger.info({ totalDays: planStructure.total_days, topics: planStructure.topics.length }, 'Topic plan generated');
 
   // Use deadline as plan_date to avoid collision with other plans created today
   const planDate = input.deadline.split('T')[0];
@@ -493,9 +517,9 @@ export const generateTopicPlan = async (
   }
 
   // Add quiz task at the end if enabled
-  if (input.include_quiz !== false && planStructure.quiz_day) {
+  if (input.include_quiz !== false && quizDay) {
     const quizDate = new Date(today);
-    quizDate.setDate(quizDate.getDate() + planStructure.quiz_day - 1);
+    quizDate.setDate(quizDate.getDate() + quizDay - 1);
 
     tasks.push({
       study_plan_id: studyPlan.id,

@@ -5,6 +5,7 @@ import rateLimit from 'express-rate-limit';
 import { errorHandler, notFoundHandler } from './middleware/errorHandler.ts';
 import { checkDatabaseConnection } from './db/supabase.ts';
 import { ragService } from './services/rag.service.ts';
+import { llmService } from './services/llm.service.ts';
 import { logger } from './utils/logger.ts';
 
 // Import routes
@@ -45,7 +46,7 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 // Request logging middleware
 app.use((req: Request, res: Response, next: NextFunction) => {
   const start = Date.now();
-  
+
   // Log when response finishes
   res.on('finish', () => {
     const duration = Date.now() - start;
@@ -56,7 +57,7 @@ app.use((req: Request, res: Response, next: NextFunction) => {
       duration: `${duration}ms`,
       ip: req.ip || req.headers['x-forwarded-for'] || 'unknown',
     };
-    
+
     // Color code by status
     if (res.statusCode >= 500) {
       logger.error(logData, `${req.method} ${req.originalUrl}`);
@@ -66,7 +67,7 @@ app.use((req: Request, res: Response, next: NextFunction) => {
       logger.info(logData, `${req.method} ${req.originalUrl}`);
     }
   });
-  
+
   next();
 });
 
@@ -85,7 +86,7 @@ app.get('/health', async (req: Request, res: Response) => {
   const dbHealthy = await checkDatabaseConnection();
 
   res.status(dbHealthy ? 200 : 503).json({
-    status: dbHealthy ? 'healthy' : 'unhealthy', 
+    status: dbHealthy ? 'healthy' : 'unhealthy',
     timestamp: new Date().toISOString(),
     uptime: process.uptime(),
     environment: NODE_ENV,
@@ -102,12 +103,9 @@ app.get('/debug/rag', async (req: Request, res: Response) => {
   try {
     const schema = await ragService.getSchemaInfo();
     const sampleData = await ragService.getSampleData(10);
-    
+
     res.json({
-      schema: schema ? {
-        class: schema.class,
-        properties: schema.properties?.map((p: any) => ({ name: p.name, dataType: p.dataType })),
-      } : null,
+      schema,
       sampleData,
       message: 'Use this to check actual field values in Weaviate',
     });
@@ -154,15 +152,25 @@ app.listen(PORT, () => {
   console.log(`URL: http://localhost:${PORT}`);
   console.log(`Health: http://localhost:${PORT}/health`);
   console.log('=================================');
+
+  // Warn if AI credentials are missing
+  if (!process.env.GEMINI_API_KEY) {
+    console.warn('⚠️  WARNING: GEMINI_API_KEY is not set — AI features will fail');
+  } else {
+    const models = llmService.getModelInfo();
+    console.log('✅ AI provider: Google Gemini');
+    console.log(`   Tutor model:   ${models.tutor}`);
+    console.log(`   Utility model: ${models.utility}`);
+    console.log(`   Planner model: ${models.planner}`);
+  }
 });
 
 // Graceful shutdown
-process.on('SIGTERM', () => {
-  console.log('SIGTERM received, shutting down gracefully...');
+const shutdown = async (signal: string) => {
+  console.log(`${signal} received, shutting down gracefully...`);
+  await ragService.shutdown();
   process.exit(0);
-});
+};
 
-process.on('SIGINT', () => {
-  console.log('SIGINT received, shutting down gracefully...');
-  process.exit(0);
-});
+process.on('SIGTERM', () => void shutdown('SIGTERM'));
+process.on('SIGINT', () => void shutdown('SIGINT'));
