@@ -15,7 +15,7 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
             </Link>
             <div className="flex items-center gap-1">
               <Link
-                href="https://github.com/idityaGE/shiksha-ai"
+                href="https://github.com/Agarwalsonali/Shiksha-AI"
                 target="_blank"
                 rel="noopener noreferrer"
               >

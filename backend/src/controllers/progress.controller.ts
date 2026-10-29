@@ -658,7 +658,8 @@ export const getCurriculumWithProgress = async (req: AuthRequest, res: Response)
     }
 
     // Get curriculum for user's class
-    const curriculum = getCurriculumByClass(profile.class);
+    const classNum = Number(profile.class);
+    const curriculum = getCurriculumByClass(classNum);
     if (!curriculum) {
       throw new NotFoundError(`Curriculum not found for class ${profile.class}`);
     }
@@ -672,6 +673,7 @@ export const getCurriculumWithProgress = async (req: AuthRequest, res: Response)
 
     if (progressError) {
       logger.error({ error: progressError }, 'Failed to fetch progress data');
+      throw new DatabaseError('Failed to fetch user progress data');
     }
 
     // Create a map of chapter_id -> progress for quick lookup
@@ -825,6 +827,9 @@ export const getCurriculumWithProgress = async (req: AuthRequest, res: Response)
   } catch (error) {
     logger.error({ error, userId }, 'Failed to get curriculum with progress');
     if (error instanceof ValidationError || error instanceof NotFoundError || error instanceof DatabaseError) throw error;
-    throw new DatabaseError('Failed to get curriculum with progress');
+    // Re-throw with the original message for better debugging
+    const originalMessage = error instanceof Error ? error.message : 'Unknown error';
+    logger.error({ originalMessage }, 'Unexpected error in getCurriculumWithProgress');
+    throw new DatabaseError(`Failed to get curriculum with progress: ${originalMessage}`);
   }
 };

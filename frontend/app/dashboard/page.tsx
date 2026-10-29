@@ -115,7 +115,7 @@ export default function DashboardPage() {
         {/* Left Column */}
         <div className="space-y-6">
           {/* Progress Summary */}
-          <ProgressSummaryCard />
+          <ProgressSummaryCard enabled={Boolean(profile)} />
 
           {/* Today's Study Plan */}
           <Card>

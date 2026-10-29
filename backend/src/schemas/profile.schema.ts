@@ -5,7 +5,7 @@ import { z } from 'zod';
  * All fields are optional since this is a PATCH operation
  */
 export const updateProfileSchema = z.object({
-  class: z.number().int().min(6).max(12).optional(),
+  class: z.number().int().min(9).max(12).optional(),
   board: z.string().min(1).optional(),
   subjects: z.array(z.string()).min(1, 'At least one subject required').optional(),
   weak_topics: z.array(z.string()).optional(),

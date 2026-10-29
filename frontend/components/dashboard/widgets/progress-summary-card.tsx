@@ -4,24 +4,29 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
-import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Skeleton } from '@/components/ui/skeleton';
 import { RiBookOpenLine, RiArrowRightLine, RiCheckLine, RiTimeLine } from '@remixicon/react';
 import { progressApi } from '@/lib/api/progress.api';
-import type { CurriculumWithProgress, SubjectWithProgress } from '@/lib/types/progress.types';
+import type { CurriculumWithProgress } from '@/lib/types/progress.types';
 
 interface ProgressSummaryCardProps {
   compact?: boolean;
+  enabled?: boolean;
 }
 
-export function ProgressSummaryCard({ compact = false }: ProgressSummaryCardProps) {
+export function ProgressSummaryCard({ compact = false, enabled = true }: ProgressSummaryCardProps) {
   const [curriculum, setCurriculum] = useState<CurriculumWithProgress | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(enabled);
 
   useEffect(() => {
+    if (!enabled) {
+      setLoading(false);
+      return;
+    }
+
     fetchProgress();
-  }, []);
+  }, [enabled]);
 
   const fetchProgress = async () => {
     try {

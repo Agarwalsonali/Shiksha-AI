@@ -5,6 +5,8 @@ import { Button } from '@/components/ui/button';
 import {
   Sheet,
   SheetContent,
+  SheetHeader,
+  SheetTitle,
   SheetTrigger,
 } from '@/components/ui/sheet';
 import { RiMenuLine } from '@remixicon/react';
@@ -42,6 +44,9 @@ export default function TutorPage() {
               </Button>
             </SheetTrigger>
             <SheetContent side="left" className="w-72 p-0" showCloseButton={false}>
+              <SheetHeader className="sr-only">
+                <SheetTitle>Tutor navigation</SheetTitle>
+              </SheetHeader>
               <TutorSidebar onSessionSelect={() => setSidebarOpen(false)} />
             </SheetContent>
           </Sheet>

@@ -52,7 +52,7 @@ export default function LandingPage() {
             <span className="text-sm font-medium">Shiksha AI</span>
             <div className="flex items-center gap-1">
               <Link
-                href="https://github.com/idityaGE/shiksha-ai"
+                href="https://github.com/Agarwalsonali/Shiksha-AI"
                 target="_blank"
                 rel="noopener noreferrer"
               >

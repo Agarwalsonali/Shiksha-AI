@@ -15,7 +15,7 @@ export const signupSchema = z.object({
     .regex(/[0-9]/, 'Must contain at least one number')
     .regex(/[^A-Za-z0-9]/, 'Must contain at least one special character'),
   name: z.string().min(2, 'Name must be at least 2 characters'),
-  class: z.number().int().min(6).max(12, 'Class must be between 6 and 12'),
+  class: z.number().int().min(9).max(12, 'Class must be between 9 and 12'),
   board: z.string().min(1, 'Please select your board'),
   subjects: z.array(z.string()).min(1, 'Please select at least one subject'),
 });
@@ -25,9 +25,6 @@ export type SignupInput = z.infer<typeof signupSchema>;
 
 // Constants for dropdowns
 export const CLASS_LEVELS = [
-  { value: '6', label: 'Class 6' },
-  { value: '7', label: 'Class 7' },
-  { value: '8', label: 'Class 8' },
   { value: '9', label: 'Class 9' },
   { value: '10', label: 'Class 10' },
   { value: '11', label: 'Class 11' },

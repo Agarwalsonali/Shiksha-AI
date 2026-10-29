@@ -8,7 +8,7 @@ export const signupSchema = z.object({
   email: z.string().email('Invalid email address'),
   password: z.string().min(8, 'Password must be at least 8 characters'),
   name: z.string().min(2, 'Name must be at least 2 characters'),
-  class: z.number().int().min(6).max(12, 'Class must be between 6 and 12'),
+  class: z.number().int().min(9).max(12, 'Class must be between 9 and 12'),
   board: z.string().default('CBSE'),
   subjects: z.array(z.string()).min(1, 'At least one subject is required'),
   target_exams: z.array(z.string()).optional().default([]),
